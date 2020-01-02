@@ -1,0 +1,375 @@
+---
+# Personal details
+name: Κωνσταντίνος Χωριανόπουλος
+position: Επίκουρος Καθηγητής (Τεχνολογίες Λογισμικού)
+address:
+- Ιόνιο Πανεπιστήμιο
+- Τμήμα Πληροφορικής
+- Πλατεία Τσιριγώτη 7
+- 49100 Κέρκυρα
+- Ελλάδα
+phone: '+30 26610 87707'
+email: 'choko@ionio.gr'
+# Insert URLs without http://
+homepage: 'users.ionio.gr/choko'
+github: epidrome
+telegram: epidrome
+orcid: '0000-0002-5999-9387'
+scholar: 'EnRHC-4AAAAJ'
+
+# Sections
+
+intro:
+
+skills:
+- Διάδραση ανθρώπου και υπολογιστή
+- Τεχνολογίες λογισμικού
+- Προγραμματισμός πολυμέσων
+- Διάδραση με βίντεο
+- Κινητός και διάχυτος υπολογισμός
+- Κοινωνικά και συνεργατικά συστήματα
+- Επικοινωνία και μάθηση
+
+experience:
+- years: 2008–-
+  employer: Ιόνιο Πανεπιστήμιο (ΙΠ)
+  job: |
+    Επίκουρος Καθηγητής (2014--) \
+    Λέκτορας (2009--2014) \
+    Συμβασιούχος διδάσκοντας (2008--2009)
+  city: Κέρκυρα, Ελλάδα
+- years: 2009–-
+  employer: Ελληνικό Ανοικτό Πανεπιστήμιο (ΕΑΠ)
+  job: Συνεργαζόμενο Εκπαιδευτικό Προσωπικό (ΣΕΠ)
+  city: Αθήνα, Ελλάδα
+- years: 2006–-2008
+  employer: Bauhaus-University of Weimar
+  job: Μεταδιδακτορικός ερευνητής
+  city: Βαϊμάρη, Γερμανία
+- years: 2006–-2008
+  employer: Πανεπιστήμιο Αιγαίου
+  job: Συμβασιούχος διδάσκοντας
+  city: Σύρος, Ελλάδα
+- years: 2005--2006
+  employer: Ελληνικό Πολεμικό Ναυτικό
+  job: Ναύτης
+  city: Χανιά-Αθήνα, Ελλάδα
+- years: 2004--2005
+  employer: Imperial College London
+  job: Μεταδιδακτορικός ερευνητής
+  city: Λονδίνο, Αγγλία
+- years: 2000--2004
+  employer: Οικονομικό Πανεπιστήμιο Αθήνας
+  job: Μεταπτυχιακός ερευνητής
+  city: Αθήνα, Ελλάδα
+- years: 1997--1999
+  employer: Πολυτεχνείο Κρήτης
+  job: Προπτυχιακός ερευνητής
+  city: Χανιά, Ελλάδα
+
+education:
+- year: 2004
+  title: Διδακτορικό
+  department: Διοικητική Επιστήμη και Τεχνολογία
+  institute: Οικονομικό Πανεπιστήμιο Αθήνας
+  thesis: 'Virtual television channels: Conceptual model, user interface design and affective usability evaluation'
+  supervisor: 'Επίβλεψη: Διομήδης Σπινέλλης'
+- year: 2001
+  title: Μεταπτυχιακό
+  department: Μάρκετινγκ και Επικοινωνία
+  institute: Οικονομικό Πανεπιστήμιο Αθήνας
+  thesis: Σχεδίαση της διεπαφής με το χρήστη και αξιολόγηση της ευχρηστίας για εφαρμογές αμφίδρομης διαφήμισης στην ψηφιακή τηλεόραση
+  supervisor: 'Επίβλεψη: Γεώργιος Δουκίδης'
+- year: 1999
+  title: Δίπλωμα
+  department: Ηλεκτρονικών Μηχανικών και Μηχανικών Ηλεκτρονικών Υπολογιστών
+  institute: Πολυτεχνείο Κρήτης
+  thesis: Σύστημα για την ανάπτυξη εφαρμογών γεωγραφικής πληροφόρησης στον παγκόσμιο ιστό
+  supervisor: 'Επίβλεψη: Σταύρος Χριστοδουλάκης'
+
+projects:
+- years: 2016--
+  title: Ανοιχτό περιεχόμενο και συμμετοχικό βιβλίο στην εκπαίδευση
+  subject: Ανάπτυξη και συντήρηση συμπληρωματικού διαδραστικού και συμμετοχικού περιεχομένου για [βιβλίο για την 3βάθμια εκπαίδευση](http://mibook.org).
+  instrument: Αυτοχρηματοδότηση
+- years: 2012--
+  title: Ανοιχτό λογισμικό στην έρευνα
+  subject: Ανάπτυξη και συντήρηση υπηρεσιών που βασίζονται σε έργα λογισμικού ανοιχτού κώδικα, όπως [ανάλυση διάδρασης με βίντεο](http://www.socialskip.org), [οπτικοποίηση δεδομένων από κοινωνικά μέσα](http://www.flutrack.org), και τα [γεωγραφικά συστήμα πληροφόρησης](http://www.mapito.org).
+  instrument: Αυτοχρηματοδότηση
+- years: 2018--2019
+  title: DEFEND (Data Governance for Supporting GDPR) 
+  subject: Συλλογή απαιτήσεων από τους χρήστες 
+  instrument: Ευρωπαϊκή Επιτροπή (Horizon2020)
+- years: 2015--2018
+  title: TRAMOOC (Translation for Massive Open Online Courses)
+  subject: Σχεδίαση και αξιολόγηση διεπαφής για την μετάφραση των υπότιτλων σε βίντεο μαθήματα.
+  instrument: Ευρωπαϊκή Επιτροπή (Horizon2020)
+- years: 2010--2011
+  title: VIDEOPAL
+  subject: Το έργο Videopal μελετά μια τεχνολογική παρέμβαση σε δύο απομακρυσμένες αίθουσες διδασκαλίας, η μια βρίσκεται στην Ελλάδα και η άλλη στις ΗΠΑ. Η τεχνολογική παρέμβαση εστιάζει στην ασύγχρονη επικοινωνία μέσω βίντεο για παιδιά στις τελευταίες τάξεις του δημοτικού.
+  instrument: Microsoft Research USA
+- years: 2009--2011
+  title: CULT (Cultural Understanding through Learning and Technology)
+  subject: Μελέτη των κοινωνικών επιπτώσεων της τοποθέτησης ενός συστήματος διάχυτου υπολογισμού στον φυσικό χώρο. Το σύστημα περιλαμβάνει εύχρηστο και ευχάριστο λογισμικό που επιτρέπει την κοινωνική διάδραση, τόσο από μακρυά όσο και από κοντά, με πολλαπλά μέσα και συσκευές χρήστη. Τα σχολεία που συμμετέχουν βρίσκονται τόσο στην Ελλάδα όσο και στο εξωτερικό. Με αυτό τον τρόπο τα αποτελέσματα του έργου αφορούν γενικότερα όλες εκείνες τις κοινότητες που βρίσκονται μακρυά από τις πόλεις αλλά επιθυμούν να έχουν ίσες ευκαιρίες στην επικοινωνία και στην συμμετοχή στα κοινά.
+  instrument: Ευρωπαϊκή Επιτροπή (Marie Curie FP7-ERG)
+- years: 2002--2010
+  title: UITV (Understanding Interactive Television)
+  subject: Εκδότης του διεθνούς ηλεκτρονικού [ενημερωτικού δελτίου για την αμφίδρομη ψηφιακή τηλεόραση](https://www.freelists.org/archive/uitv/) με περισσότερους από 800 εγγεγραμμένους συνδρομητές (καθηγητές, ερευνητές, στελέχη διεθνών οπτικοακουστικών οργανισμών και τηλεοπτικών σταθμών).
+  instrument: Αυτοχρηματοδότηση
+- years: 2006--2008
+  title: MEDIACITY
+  subject: Μεταδιδακτορική έρευνα και διδασκαλία στην διεπιστημονική περιοχή των [νέων μέσων και της αρχιτεκτονικής](http://www.uni-weimar.de/mediaarchitecture).
+  instrument: Ευρωπαϊκή Επιτροπή (Marie Curie FP6-ΤοΚ)
+- years: 2004--2005
+  title: TIRAMISU (The Innovative Rights and Access Management Inter-platform Solution)
+  subject: Το έργο αυτό είχε αντικείμενο τη σχεδίαση και ανάπτυξη ενός πληροφορικού συστήματος διαχείρισης δικαιωμάτων ψηφιακού περιεχομένου. Απασχόληση με τη συλλογή των απαιτήσεων για τους χρήστες και τον σχεδιασμό του επιχειρηματικού μοντέλου για την διανομή και τιμολόγηση περιεχομένου πολυμέσων.
+  instrument: Ευρωπαϊκή Επιτροπή (FP6-IST)
+- years: 2001--2003
+  title: CONTESSA (Content Transformation Engine Supporting Universal Access)
+  subject: Στο έργο αυτό έγινε η ανάπτυξη εργαλείων συγγραφής πολυμεσικού περιεχομένου, το οποίο θα μπορεί αυτόματα να προσαρμόζεται σε υβριδικά δίκτυα (π.χ. μετάδοση μέσω Internet, TV, wireless) και σε πολλαπλές καταναλωτικές συσκευές (π.χ. κινητό τηλέφωνο, υπολογιστής, τηλεόραση, κτλ). Απασχόληση στη διαχείριση του έργου.
+  instrument: Ευρωπαϊκή Επιτροπή (FP5-IST)
+- years: 2000--2001
+  title: iMEDIA (Intelligent Mediation Environment for Digital Interactive Advertising
+  subject: Στο έργο αυτό έγινε ανάπτυξη ενός πρωτότυπου συστήματος αμφίδρομης διαφήμισης για την ψηφιακή τηλεόραση, το οποίο δημιουργεί ένα ξεχωριστό διαφημιστικό διάλειμμα σε κάθε οικιακό αποκωδικοποιητή, με βάση τα προφίλ των χρηστών. Απασχόληση στη σχεδίαση και αξιολόγηση της διεπαφής με το χρήστη.
+  instrument: Ευρωπαϊκή Επιτροπή (FP5-IST)
+- years: 1997--1999
+  title: CAMPIELLO (Interacting in collaborative environments to promote and sustain the meeting between inhabitants and tourists
+  subject: Στο έργο αυτό μελετήθηκαν οι δυνατότητες για χρήση κοινωνικών συστημάτων γεωγραφικής πληροφόρησης σε περιοχές με πολιτιστικό ενδιαφέρον και έντονη τουριστική ανάπτυξη, όπως είναι τα Χανιά και η Βενετία. Σχεδίαση και υλοποίηση της διεπαφής με το χρήστη για ένα γεωγραφικό σύστημα πληροφόρησης μέσω Web.
+  instrument: Ευρωπαϊκή Επιτροπή (FP4-ESPRIT)
+
+awards:
+- year: 2014--2016
+  title: Επισκέπτης Αναπληρωτής Καθηγητής
+  subject: Norvegian University of Science and Technology (NTNU), Τροντχαϊμ, Νορβηγία
+- year: 2015
+  title: Συν-υπεύθυνος προγράμματος (program co-chair)
+  subject: '[14th International Conference on Entertainment Computing (ICEC) 2015](https://icec2015.idi.ntnu.no/), NTNU, Norway'
+- year: 2012
+  title: Προσκεκλημένος εισηγητής (keynote speaker)
+  subject: '[WebMedia 2012 ACM SIGMM conference](http://sws2012.ime.usp.br/webmedia/keynotes.php), Sao Paulo, Brazil, 2012'
+- year: 2010--2011
+  title: Υποτροφία Microsoft Research USA
+  subject: Υποτροφία για την εκτέλεση του ερευνητικού προγράμματος Videopal
+- year: 2009--2011
+  title: Υποτροφία Marie Curie
+  subject: Υποτροφία για την εκτέλεση του ερευνητικού προγράμματος CULT (Cultural Understanding through Learning and Technology)
+- year: 2007
+  title: Συν-υπεύθυνος προγράμματος (program co-chair)
+  subject: 5^ο^ Ευρωπαϊκό συνεδρίο [EuroITV 2007 Interactive TV as a Shared Experience](https://tvx.acm.org/2007/EuroITV-2007.html) για την αμφίδρομη τηλεόραση, CWI, Amsterdam, the Netherlands
+- year: 2007
+  title: Προσκεκλημένος εισηγητής (keynote speaker)
+  subject: Συνέδριο Eyes on Interactive Television (EyesonITV) 2007, Vasa, Finland, May 2007.
+- year: 2006
+  title: Συν-υπεύθυνος προγράμματος (program co-chair)
+  subject: 4^ο^ Ευρωπαϊκό συνεδρίο (EuroITV 2006 Beyond Usability, Broadcast, and TV) για την αμφίδρομη τηλεόραση, ΟΠΑ, Αθήνα, Ελλάδα.
+- year: 2005
+  title: Προσκεκλημένος εισηγητής (keynote speaker)
+  subject: 3^ο^ ευρωπαϊκό συνέδριο European Conference on Interactive Television (EuroITV) 2005 User Centred ITV Systems, Programmes and Applications, Aalborg, Denmark.
+- year: 2003
+  title: Υποτροφία NSF (USA)
+  subject: National Science Foundation (NSF) για τη συμμετοχή (35% acceptance rate) στο πάνελ των διδακτορικών φοιτητών ([doctoral consortium](http://www.chi2003.org/doctoral_consortium_program.html)) στο συνέδριο ACM SIGCHI conference on Human factors in computing systems 2003, Ft Lauderdale, Florida, USA.
+
+phd:
+- years: 2018--
+  name: Κωνσταντίνος Πατηνιώτης
+  subject: Βίντεο-παιχνίδια και Εκπαίδευση
+- years: 2017--
+  name: Μανούσος Καμηλάκης
+  subject: Γεωγραφικά Συστήματα Πληροφόρησης
+- years: 2016--
+  name: Διογένης Αλεξανδράκης
+  subject: Κοινωνικά και Συνεργατικά Συστήματα
+- years: 2014--2019
+  name: Αλέξανδρος Μερκούρης
+  subject: Ρομποτική και Εκπαίδευση
+- years: 2013--2017
+  name: Βαρβάρα Γαρνέλη
+  subject: Βίντεο-παιχνίδια και Εκπαίδευση
+
+thesis:
+- year: 2019
+  name: Γιάννης Πριόβολος, ΕΑΠ
+  subject: Επαυξημένο επιτραπέζιο παιχνίδι 
+- year: 2018
+  name: Ζήσης Δημητριάδης, ΕΑΠ
+  subject: Επαυξημένο φυσικό βιβλίο
+- year: 2017
+  name: Αντώνης Παπαπολύζος, ΕΑΠ
+  subject: Κινητός υπολογισμός και γεωγραφικοί χάρτες
+- year: 2016
+  name: Σήφης Σημιανάκης, ΕΑΠ
+  subject: Κινητός υπολογισμός και βίντεο
+- year: 2015
+  name: Ιπποκράτης Καπενεκάκης, ΕΑΠ
+  subject: Κινητός υπολογισμός και γεωγραφικοί χάρτες
+- year: 2014
+  name: Αλέξανδρος Μερκούρης, ΕΑΠ
+  subject: Ρομποτική και εκπαίδευση
+- year: 2013
+  name: Κάρολος Ταλβής, ΙΠ
+  subject: Οπτικοποίηση δεδομένων
+- year: 2013
+  name: Βαρβάρα Γαρνέλη, ΙΠ
+  subject: Βίντεο-παιχνίδια και εκπαίδευση
+- year: 2012
+  name: Χριστίνα Ιλιούδη, ΙΠ
+  subject: Βίντεο και εκπαίδευση
+- year: 2011
+  name: Ιωάννης Λευτεριώτης, ΙΠ
+  subject: Πολυαπτική διάδραση
+- year: 2011
+  name: Χρυσούλα Γκονέλα, ΙΠ
+  subject: Διάδραση και βίντεο
+- year: 2010
+  name: Γιούλη Σταματούκου, ΕΑΠ
+  subject: Εκπαιδευτικό βίντεο-παιχνίδι
+- year: 2010
+  name: Κωνσταντίνος Μικάλεφ, ΕΑΠ
+  subject: Εκπαίδευση και μουσείο
+- year: 2007
+  name: Χαράλαμπος Κουτσουρελάκης, ΕΑΠ
+  subject: Ευχρηστία κινητών τηλεφώνων
+
+bsc:
+- years: 2011--
+  name: Απανταχού υπολογίζειν (Εξυπνα Περιβάλλοντα και Εφαρμογές), ΙΠ
+  type: Εργασίες
+- years: 2009--
+  name: Πολυμέσα, ΙΠ
+  type: Διαλέξεις, Εργαστήριο
+- years: 2008--
+  name: Επικοινωνία Ανθρώπου-Υπολογιστή, ΙΠ
+  type: Διαλέξεις, Εργαστήριο
+- years: 2008--
+  name: Τεχνολογία Λογισμικού, ΙΠ
+  type: Διαλέξεις, Εργαστήριο
+- years: 2011--
+  name: Κοινωνικά και Συνεργατικά Συστήματα (Κινητά και Κοινωνικά Μέσα), ΙΠ
+  type: Διαλέξεις, Εργαστήριο
+- years: 2008--2009
+  name: ΤΠΕ στον Τουρισμό, ΙΠ
+  type: Διαλέξεις, Εργαστήριο
+- years: 2007--2008
+  name: Τέχνη Υπολογιστή και Τέχνη διαδικτύου, ΙΠ
+  type: Διαλέξεις, Εργαστήριο
+- years: 2006--2008
+  name: Πολυμέσα, ΠΑ
+  type: Διαλέξεις, 50%
+- years: 2006--2007
+  name: Προγραμματισμός, ΠΑ
+  type: Εργαστήριο, 50%
+- years: 2006--2008
+  name: Οπτικοακουστικές τεχνικές, ΠΑ
+  type: Εργαστήριο
+- years: 2006--2008
+  name: Θεωρία της επικοινωνίας, ΠΑ
+  type: Διαλέξεις
+- years: 2004--2005
+  name: Ψηφιακά μέσα, ΟΠΑ
+  type: Διαλέξεις, 50%
+
+msc:
+- years: 2019--2020
+  name: Διάχυτος Υπολογισμός, ΠΠ 
+  type: Εργασίες, 50%
+- years: 2019--2020
+  name: Συνεργατικές Τεχνολογίες, ΠΠ 
+  type: Εργασίες, 50%
+- years: 2011--
+  name: Σχεδίαση και Ανάλυση Λογισμικού-Υλικού (ΣΔΥ60), ΕΑΠ
+  type: ΣΕΠ, Συντονιστής
+- years: 2009--2013, 2019--
+  name: Κοινωνικά και Συνεργατικά Συστήματα (Συνεργατικές Εφαρμογές), ΙΠ
+  type: Εργασίες
+- years: 2009--2013
+  name: Σχεδίαση της Διάδρασης Ανθρώπου-Υπολογιστή, ΙΠ
+  type: Διαλέξεις
+- years: 2010--2011
+  name: Εξειδικεύσεις στην Τεχνολογία Λογισμικού (ΠΛΣ60), ΕΑΠ
+  type: ΣΕΠ
+- years: 2009--2010
+  name: Σχεδιασμός και Διαχείριση Λογισμικού (ΠΛΣ61), ΕΑΠ
+  type: ΣΕΠ
+- years: 2007--2008
+  name: Διαδραστική τηλεόραση, Πανεπιστήμιο Τεχνών Βερολίνου
+  type: Διαλέξεις, Εργασίες
+- years: 2006--2008
+  name: Διαδραστική σχεδίαση, Πανεπιστήμιο Αιγαίου
+  type: Διαλέξεις
+
+talks:
+- year: 2015
+  subject: Προγραμματισμός της διάδρασης και καινοτομία
+  institute: Προσκεκλημένος ομιλητής, Ευχρηστία και Καινοτομία, ΕΚΠΑ
+  city: Αθήνα, Ελλάδα
+- year: 2014
+  subject: Open system and open data for epidemiology
+  institute: Προσκεκλημένος ομιλητής, Madeira Interactive Technologies Institute
+  city: Μαδέϊρα, Πορτογαλία
+- year: 2013
+  subject: Open system and open data for epidemiology
+  institute: Προσκεκλημένος ομιλητής, Health Informatics Day, ΕΚΠΑ
+  city: Αθήνα, Ελλάδα
+- year: 2012
+  subject: Ubiquitous computing and interaction
+  institute: Σεμινάριο, Aarhus University
+  city: Aarhus, Denmark
+- year: 2012
+  subject: Interaction design for ubiquitous learning and entertainment through video technologies
+  institute: Σεμινάριο, Sao Paulo University
+  city: Sao Carlos, Brazil
+- year: 2012
+  subject: Graphical interfaces for Navigating Web video
+  institute: Προσκεκλημένος ομιλητής, Chalmers University of Technology
+  city: Gothenburg, Sweden
+- year: 2012
+  subject: Digital media pedagogy
+  institute: Προσκεκλημένος ομιλητής, KTH
+  city: Stockholm, Sweden
+- year: 2012
+  subject: User-centered design and development methods for TV and video interaction
+  institute: Προσκεκλημένος ομιλητής, University of Aveiro
+  city: Aveiro, Portugal
+- year: 2010
+  subject: Η διδασκαλία και η έρευνα στην περιοχή της Επικοινωνίας Ανθρώπου-Υπολογιστή στο Ιόνιο Πανεπιστήμιο
+  institute: Σεμινάριο, Ημέρες Ευχρηστίας και Προσβασιμότητας 2010, ΕΚΠΑ
+  city: Αθήνα, Ελλάδα
+- year: 2007
+  subject: Από τα μέσα μαζικής επικοινωνίας στα διαδραστικά πολυμέσα
+  institute: Προσκεκλημένος ομιλητής. Ιόνιο Πανεπιστήμιο
+  city: Κέρκυρα, Ελλάδα
+- year: 2006
+  subject: Interaction Design for Ambient Systems
+  institute: Προσκεκλημένος ομιλητής. Αρχιτεκτονικά μέσα επικοινωνίας. Πανεπιστήμιο Κύπρου
+  city: Λευκωσία, Κύπρος
+- year: 2006
+  subject: Supporting the Social Uses of Interactive TV
+  institute: Προσκεκλημένος ομιλητής, Social computing course, University of the Arts (UDK)
+  city: Βερολίνο, Γερμανία
+- year: 2005
+  subject: User Interface Design for Interactive TV
+  institute: Προσκεκλημένος ομιλητής, HCI course, University College London
+  city: London, England
+- year: 2002
+  subject: Σχεδίαση της αλληλεπίδρασης με το χρήστη για εφαρμογές αμφίδρομης τηλεόρασης
+  institute: Διεθνές μεταπτυχιακό GEM, Οικονομικό Πανεπιστήμιο Αθήνας
+  city: Αθήνα, Ελλάδα
+
+languages:
+- language: Ελληνικά
+  proficiency: Μητρική
+- language: Αγγλικά
+  proficiency: Άριστο
+- language: Ισπανικά
+  proficiency: Προχωρημένο
+- language: Γαλλικά
+  proficiency: Βασικό
+
+# Settings
+mainfont: GFS Didot
+fontsize: 11pt
+lang: el-GR
+geometry: a4paper, left=35mm, right=35mm, top=25mm, bottom=25mm
+toc: true
+nocite: '@*'
+---
