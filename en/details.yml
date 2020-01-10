@@ -1,0 +1,70 @@
+---
+# Personal details
+name: Konstantinos Chorianopoulos
+address:
+- Ionian University
+- Department of Informatics
+- Platia Tsirigoti 7
+- 49100 Corfu
+- Greece
+phone: "+30 26610 87707"
+email: choko@ionio.gr 
+# Insert URLs without http://
+homepage: 'scholar.epidro.me'
+github: epidrome
+orcid: '0000-0002-5999-9387'
+
+
+# Sections
+
+experience:
+- years: 2008–-now
+  employer: Ionian University
+  job: Professor 
+  city: Corfu, Greece
+- years: 2009–-now
+  employer: Hellenic Open University
+  job: Adjunct Professor
+  city: Athens, Greece
+- years: 2014--2016
+  employer: Norwegian University of Science and Technology
+  job: Visiting Professor
+  city: Trondheim, Norway
+- years: 2006–-2008
+  employer: Bauhaus University of Weimar
+  job: Marie Curie Fellow
+  city: Weimar, Germany
+- years: 2005--2006
+  employer: Hellenic Navy 
+  job: Obligatory military service 
+  city: Chania, Greece 
+- years: 2004--2005
+  employer: Imperial College London
+  job: Research Associate
+  city: London, England
+- years: 2000--2004
+  employer: Athens University of Economics and Business
+  job: Research Assistant 
+  city: Athens, Greece
+
+education:
+- year: 2004
+  subject: PhD Interaction Design
+  institute: Athens University of Economics and Business
+  city: Athens, Greece
+- year: 2001
+  subject: MSc Marketing and Communication
+  institute: Athens University of Economics and Business
+  city: Athens, Greece
+- year: 1999
+  subject: Meng Electronic and Computer Engineering
+  institute: Technical University of Crete
+  city: Chania, Greece
+
+# Settings
+mainfont: Hoefler Text
+fontsize: 11pt
+lang: english
+geometry: a4paper, left=35mm, right=35mm, top=51mm, bottom=17mm
+toc: false
+---
