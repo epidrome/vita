@@ -4,7 +4,7 @@ title: "Konstantinos Chorianopoulos Vita"
 
 ## Resume CV in Greek
 
-[Ελληνικό βιογραφικό](https://vita.epidro.me/gr/resume.pdf)
+[Ελληνικό βιογραφικό](/gr/resume.pdf)
 
 {% include cv/summary.md %}
 {% include cv/recent.md %}
