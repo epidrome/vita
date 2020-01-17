@@ -1,10 +1,6 @@
 ---
-title: "Konstantinos Chorianopoulos Vita" 
+title: "Konstantinos Chorianopoulos Curriculum Vitae" 
 ---
-
-## Resume CV in Greek
-
-[Ελληνικό βιογραφικό](/gr/resume.pdf)
 
 {% include cv/summary.md %}
 {% include cv/recent.md %}
@@ -22,3 +18,9 @@ title: "Konstantinos Chorianopoulos Vita"
 {% include cv/social.md %}
 {% include cv/getalife.md %}
 {% include cv/contact.md %}
+
+## Resume CV in Greek
+
+[Ελληνικό βιογραφικό](/gr/resume.pdf)
+
+
