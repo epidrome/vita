@@ -17,10 +17,11 @@ title: "Konstantinos Chorianopoulos Curriculum Vitae"
 {% include cv/awards.md %}
 {% include cv/social.md %}
 {% include cv/getalife.md %}
-{% include cv/contact.md %}
 
-## Resume CV in Greek
+[Curriculum vitae PDF](/en/resume.pdf)
 
-[Ελληνικό βιογραφικό](/gr/resume.pdf)
+## Curriculum Vitae in Greek
+
+[Ελληνικό βιογραφικό PDF](/gr/resume.pdf)
 
 
