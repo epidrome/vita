@@ -1,4 +1,4 @@
-# Source files and workflow for my academic Curriculum Vitae
+# Source files and workflow
 You can go a long way starting with plain-text Markdown files, which are converted to:
 
 1. PDF through [a pandoc workflow](https://github.com/mrzool/cv-boilerplate) and a [LaTeX template](https://github.com/dartar/cvtex) 
