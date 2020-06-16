@@ -53,3 +53,5 @@ The following students have been successfully supported toward a completed thesi
 * Maria Aune Remøy (2016): MSc Thesis (NTNU, Norway)
 * Ingeborg Ødegård Oftedal (2016): MSc Thesis (NTNU, Norway)
 * Altanopoulou, P. (2017): PhD Thesis (University of Patras, Greece)
+* Kravvaris, D. (2018): PhD Thesis (Ionian University, Greece)
+* Nikiforos, S. (2020): PhD Thesis (Ionian University, Greece)
