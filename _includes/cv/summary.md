@@ -1,7 +1,7 @@
 ## Summary
 
-I am doing research and teaching in the broad area of Informatics with an emphasis on the domains of user interfaces, video, video-games, gamification, crowdsourcing, software, learning, health.
+I am doing research and teaching in the broad area of Informatics with an emphasis on the domains of user interfaces, video, video-games, gamification, collaboration, software, learning, health.
 
-**Research methodology:** human-centered software design, user study (field, experiment).
+**Research methodology:** *software design*, *field study*.
 
-**Application domains:** Entertainment, learning, well-being, culture.
+**Application domains:** *Entertainment*, *learning*, *well-being*, *culture*.
