@@ -1,0 +1,22 @@
+title: Curriculum Vitae
+author: 
+  name: Konstantinos Chorianopoulos
+  email: vita@epidro.me 
+description: >- # this means to ignore newlines until "baseurl:"
+  Konstantinos Chorianopoulos Curriculum Vitae
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+minima:
+  social_links:
+    github:  epidrome
+
+# Build settings
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+
+header_pages:
+ - README.md

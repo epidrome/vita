@@ -1,0 +1,225 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[$fontsize$, a4paper]{article}
+
+% LAYOUT
+%--------------------------------
+% Margins
+\usepackage{geometry}
+\geometry{$geometry$}
+
+% Do not indent paragraphs
+\setlength\parindent{0in}
+
+% Enable multicolumns
+\usepackage{multicol}
+\setlength{\columnsep}{-3.5cm}
+
+% Uncomment to suppress page numbers
+% \pagenumbering{gobble}
+
+% LANGUAGE
+%--------------------------------
+% Set the main language
+$if(lang)$
+\usepackage{polyglossia}
+\setmainlanguage{$lang$}
+$endif$
+
+% TYPOGRAPHY
+%--------------------------------
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+% converts LaTeX specials (quotes, dashes etc.) to Unicode
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{$mainfont$}
+% nice icons
+\usepackage{fontawesome5}
+\usepackage{academicons}
+% Cool ampersand
+\newcommand{\amper}{{\fontspec[Scale=.95]{$mainfont$}\selectfont\itshape\&}}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% MARGIN NOTES
+%--------------------------------
+\usepackage{marginnote}
+\newcommand{\note}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+%--------------------------------
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\rmfamily\mdseries}
+\subsectionfont{\rmfamily\mdseries\scshape\normalsize}
+\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize}
+\makeatletter
+\renewcommand\thesection{}
+\renewcommand\thesubsection{}
+\renewcommand\thesubsubsection{}
+\makeatother
+
+% PDF SETUP
+%--------------------------------
+\usepackage{hyperref}
+\hypersetup
+{
+  pdfauthor={$name$},
+  pdfsubject={$name$'s CV},
+  pdftitle={$name$'s CV},
+  colorlinks, breaklinks, xetex, bookmarks,
+  filecolor=black,
+  urlcolor=[rgb]{0.117,0.682,0.858},
+  linkcolor=[rgb]{0.117,0.682,0.858},
+  linkcolor=[rgb]{0.117,0.682,0.858},
+  citecolor=[rgb]{0.117,0.682,0.858}
+}
+
+%
+%bibliography
+\usepackage[backend=biber,style=numeric,firstinits=true,sorting=ynt,maxnames=5,minnames=3,hyperref=false,isbn=false,doi=false,url=false,safeinputenc=true,language=english]{biblatex}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\DeclareNameAlias{default}{last-first}
+
+%J1, J2, etc
+\makeatletter
+\define@key{blx@bib2}{prefixnumbers}{%
+  \def\blx@prefixnumbers{#1}%
+  \iftoggle{blx@defernumbers}
+    {}
+    {\iftoggle{blx@labelnumber}
+       {\blx@warning{%
+          Option 'prefixnumbers' requires global\MessageBreak
+          'defernumbers=true'}}
+       {}}}
+\makeatother
+
+% table of contents without dots
+\usepackage{tocloft}
+\renewcommand{\cftdot}{}
+
+% bibliography sections
+\makeatletter
+\newcommand{\bibsection}[3]{
+\subsection{#1}
+\begin{refsection}[#2]
+  \nocite{*}
+  \begin{refcontext}[prefixnumbers=#3]
+    \printbibliography[heading=none]
+  \end{refcontext}
+\end{refsection}
+}
+\makeatother
+
+% DOCUMENT
+%--------------------------------
+\begin{document}
+
+{\LARGE $name$}\\[.1cm]
+
+%\begin{multicols}{2}
+
+%$for(address)$
+%$address$\\
+%$endfor$
+
+%\columnbreak
+
+{\scriptsize
+\faStyle{regular}
+\faHome \hspace{0.1cm} \href{http://$homepage$}{$homepage$} \hspace{10pt}
+%\faEnvelope \hspace{0.1cm} \href{mailto:$email$}{$email$}\\
+\aiOrcid \hspace{0.1cm} \href{http://orcid.org/$orcid$}{ORCID}\\
+
+%\vfill
+
+%\faPhone $phone$\\
+}
+
+%\end{multicols}
+
+\vspace{10pt}
+
+$if(intro)$
+$intro$
+$endif$
+
+%\subsection*{Areas of Interest}
+$if(skills)$
+\begin{itemize}
+    $for(skills)$
+      \item $skills$
+    $endfor$
+\end{itemize}
+$endif$
+
+% \vfill
+
+% \vspace{25pt}
+
+\section*{Previous Experience}
+\noindent
+$for(experience)$
+\note{$experience.years$}\textsc{$experience.employer$}\\
+\emph{$experience.job$}\\
+$experience.city$\\[.2cm]
+$endfor$
+
+$if(education)$
+\section*{Education}
+\noindent
+$for(education)$
+\note{$education.year$}\textbf{$education.subject$}$if(education.degree)$, $education.degree$$endif$\\
+\emph{$education.institute$}$if(education.city)$, $education.city$$endif$\\[.2cm]
+$endfor$
+$endif$
+
+$if(languages)$
+\section*{Languages}
+$for(languages)$
+\emph{$languages.language$} ($languages.proficiency$)\\
+$endfor$
+$endif$
+
+$body$
+
+
+%bibliography
+\section{Publications}
+
+\bibsection{Authored books}{../_bib/books.bib}{B}
+
+\bibsection{Edited books}{../_bib/editor.bib}{E}
+
+\bibsection{Edited journals}{../_bib/guest.bib}{G}
+
+\bibsection{Journal papers}{../_bib/journals.bib}{J}
+
+\bibsection{Conference papers}{../_bib/conferences.bib}{P}
+
+\bibsection{Short papers}{../_bib/workshops.bib}{W}
+
+\bibsection{Book chapters}{../_bib/chapters.bib}{C}
+
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Last update: \today\- •\-
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in \href{https://github.com/mrzool/cv-boilerplate}{
+\fontspec{Times New Roman}\XeTeX }\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+\href{http://scholar.epidro.me/resume}{http://scholar.epidro.me/resume}}
+\end{center}
+
+\end{document}

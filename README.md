@@ -1,4 +1,30 @@
-# Source files and workflow
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+## Konstantinos Chorianopoulos CV in PDF
+[English CV](/en/resume.pdf)
+
+[Ελληνικό Βιογραφικό](/gr/resume.pdf)
+
+## Office address
+[2. Adjunct Teachers Offices of the Department of Informatics and of the      Department of Audio and Visual Arts](http://www.ionio.gr/central/en/map)
+
+## Office hours
+[Schedule a meeting by providing your name and email](https://www.meetingbird.com/h/choko)
+
+## Postal address
+Ionian University
+Department of Informatics
+
+Platia Tsirigoti 7
+
+49100 Corfu
+GREECE
+
+## Source files and workflow
 You can go a long way starting with plain-text Markdown files, which are converted to:
 
 1. PDF through [a pandoc workflow](https://github.com/mrzool/cv-boilerplate) and a [LaTeX template](https://github.com/dartar/cvtex) 

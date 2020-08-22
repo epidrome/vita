@@ -1,0 +1,808 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{article}
+
+% LAYOUT
+%--------------------------------
+% Margins
+\usepackage{geometry}
+\geometry{a4paper, left=35mm, right=35mm, top=25mm, bottom=25mm}
+
+% Do not indent paragraphs
+\setlength\parindent{0in}
+
+% Enable multicolumns
+\usepackage{multicol}
+\setlength{\columnsep}{-3.5cm}
+
+% Uncomment to suppress page numbers
+% \pagenumbering{gobble}
+
+% LANGUAGE
+%--------------------------------
+\usepackage{polyglossia}
+\setmainlanguage[variant=mono]{greek}
+\PolyglossiaSetup{greek}{indentfirst=false}
+\setotherlanguage[variant=us]{english}
+% add hyp rules or replace compound words with \hyp{}
+\usepackage{hyphenat}
+\hyphenation{αν-θρώ-που-υπο-λο-γι-στή}
+
+% TYPOGRAPHY
+%--------------------------------
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+% converts LaTeX specials (quotes, dashes etc.) to Unicode
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{GFS Didot}
+% Cool ampersand
+\newcommand{\amper}{{\fontspec[Scale=.95]{GFS
+Didot}\selectfont\itshape\&}}
+% nice icons
+\usepackage{fontawesome5}
+\usepackage{academicons}
+% reduce widows and orphans
+\usepackage[all]{nowidow}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage[protrusion=true,final]{microtype}
+\usepackage{hyperref}
+
+
+% MARGIN NOTES
+%--------------------------------
+\usepackage{marginnote}
+\newcommand{\note}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+%--------------------------------
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\rmfamily\mdseries}
+\subsectionfont{\rmfamily\mdseries\scshape\normalsize}
+\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize}
+\setcounter{secnumdepth}{0}
+
+% PDF SETUP
+%--------------------------------
+\usepackage{hyperref}
+\hypersetup
+{
+  pdfauthor={Κωνσταντίνος Χωριανόπουλος},
+  pdfsubject={Κωνσταντίνος Χωριανόπουλος CV},
+  pdftitle={Κωνσταντίνος Χωριανόπουλος CV},
+  colorlinks, breaklinks, xetex, bookmarks,
+  filecolor=black,
+  urlcolor=[rgb]{0.117,0.682,0.858},
+  linkcolor=[rgb]{0.117,0.682,0.858},
+  linkcolor=[rgb]{0.117,0.682,0.858},
+  citecolor=[rgb]{0.117,0.682,0.858}
+}
+
+%
+%bibliography
+\usepackage[backend=biber,style=numeric,firstinits=true,sorting=ynt,maxnames=5,minnames=3,hyperref=false,isbn=false,doi=false,url=false,safeinputenc=true,language=english]{biblatex}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\DeclareNameAlias{default}{last-first}
+
+%J1, J2, etc
+\makeatletter
+\define@key{blx@bib2}{prefixnumbers}{%
+  \def\blx@prefixnumbers{#1}%
+  \iftoggle{blx@defernumbers}
+    {}
+    {\iftoggle{blx@labelnumber}
+       {\blx@warning{%
+          Option 'prefixnumbers' requires global\MessageBreak
+          'defernumbers=true'}}
+       {}}}
+\makeatother
+
+% table of contents without dots
+\usepackage{tocloft}
+\renewcommand{\cftdot}{}
+
+% bibliography sections
+\makeatletter
+\newcommand{\bibsection}[3]{
+\subsection{#1}
+\begin{refsection}[#2]
+  \nocite{*}
+  \begin{refcontext}[prefixnumbers=#3]
+    \printbibliography[heading=none]
+  \end{refcontext}
+\end{refsection}
+}
+\makeatother
+
+% titlepages style
+\newlength{\drop}% for my convenience
+
+%titleS
+\makeatletter
+\newcommand*{\titleS}{\begingroup% Scripts, T&H p 151
+\drop = 0.1\textheight
+\centering
+\vspace*{\drop}
+{\Huge \@title}\\[\baselineskip]
+{\large\itshape \@author}\\[\baselineskip]
+\vfill
+\rule{0.4\textwidth}{0.4pt}\\[\baselineskip]
+{\large\itshape \@date}\par
+\vspace*{\drop}
+\endgroup}
+\makeatother
+
+%titleGM
+\makeatletter
+\newcommand*{\titleGM}{\begingroup% Gentle Madness
+\drop = 0.1\textheight
+  \hbox{%
+  \hspace*{0.1\textwidth}%
+  \rule{1pt}{\textheight}
+  \hspace*{0.05\textwidth}%
+  \parbox[b]{0.75\textwidth}{
+  \vbox{%
+    \vspace{\drop}
+    {\noindent\Huge\bfseries Κωνσταντίνος\\[0.5\baselineskip]
+               Χωριανόπουλος}\\[2\baselineskip]
+    {\Large\itshape Αναπληρωτής Καθηγητής\\[0.5\baselineskip]
+                    Τεχνολογίες Λογισμικού\\[0.5\baselineskip]
+                    Ιόνιο Πανεπιστήμιο}\\[4\baselineskip]
+    \textsc{\LARGE \@title}\par
+    \vspace{0.5\textheight}
+    {\noindent \@date}\\[\baselineskip]
+    }% end of vbox
+    }% end of parbox
+  }% end of hbox
+\endgroup}
+\makeatother
+
+\title{Αναλυτικό Βιογραφικό Σημείωμα}
+\author{Κωνσταντίνος Χωριανόπουλος, Επίκουρος Καθηγητής (Τεχνολογίες Λογισμικού)}
+
+% DOCUMENT
+%--------------------------------
+\begin{document}
+
+\pagestyle{empty}
+\titleGM
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\pagestyle{plain}
+
+\begin{greek}
+
+{\LARGE Κωνσταντίνος Χωριανόπουλος}\\[.2cm]
+\textit{Αναπληρωτής Καθηγητής (Τεχνολογίες Λογισμικού)}\\[.2cm]
+
+\begin{multicols}{2}
+
+{\scriptsize
+Ιόνιο Πανεπιστήμιο\\
+Τμήμα Πληροφορικής\\
+Πλατεία Τσιριγώτη 7\\
+49100 Κέρκυρα\\
+Ελλάδα\\
+}
+
+\columnbreak
+
+{\scriptsize
+\faStyle{regular}
+\faHome \hspace{0.1cm} \href{http://users.ionio.gr/choko}{users.ionio.gr/choko}\\
+\faEnvelope \hspace{0.1cm} \href{mailto:choko@ionio.gr}{choko@ionio.gr}\\
+\aiOrcid \hspace{0.1cm} \href{http://orcid.org/0000-0002-5999-9387}{ORCID}\\
+
+\vfill
+
+\faPhone +30 26610 87707\\
+}
+
+\end{multicols}
+
+\vspace{30pt}
+
+
+\section{Ερευνητικά ενδιαφέροντα}
+          \quad Διάδραση ανθρώπου και υπολογιστή
+          \quad Τεχνολογίες λογισμικού
+          \quad Προγραμματισμός πολυμέσων
+          \quad Διάδραση με βίντεο
+          \quad Κινητός και διάχυτος υπολογισμός
+          \quad Κοινωνικά και συνεργατικά συστήματα
+          \quad Επικοινωνία και μάθηση
+    
+% \vfill
+
+\vspace{25pt}
+
+\section{Εργασία}
+\noindent
+\note{2008---}\textsc{Ιόνιο Πανεπιστήμιο (ΙΠ)}\\
+\emph{Αναπληρωτής Καθηγητής (2020--)\\
+Επίκουρος Καθηγητής (2014--)\\
+Λέκτορας (2009--2014)\\
+Συμβασιούχος διδάσκοντας (2008--2009)}\\
+Κέρκυρα, Ελλάδα\\[.2cm]
+\note{2009---}\textsc{Ελληνικό Ανοικτό Πανεπιστήμιο (ΕΑΠ)}\\
+\emph{Συνεργαζόμενο Εκπαιδευτικό Προσωπικό (ΣΕΠ)}\\
+Αθήνα, Ελλάδα\\[.2cm]
+\note{2006---2008}\textsc{Bauhaus-University of Weimar}\\
+\emph{Μεταδιδακτορικός ερευνητής}\\
+Βαϊμάρη, Γερμανία\\[.2cm]
+\note{2006---2008}\textsc{Πανεπιστήμιο Αιγαίου}\\
+\emph{Συμβασιούχος διδάσκοντας}\\
+Σύρος, Ελλάδα\\[.2cm]
+\note{2005--2006}\textsc{Ελληνικό Πολεμικό Ναυτικό}\\
+\emph{Ναύτης}\\
+Χανιά-Αθήνα, Ελλάδα\\[.2cm]
+\note{2004--2005}\textsc{Imperial College London}\\
+\emph{Μεταδιδακτορικός ερευνητής}\\
+Λονδίνο, Αγγλία\\[.2cm]
+\note{2000--2004}\textsc{Οικονομικό Πανεπιστήμιο Αθήνας}\\
+\emph{Μεταπτυχιακός ερευνητής}\\
+Αθήνα, Ελλάδα\\[.2cm]
+\note{1997--1999}\textsc{Πολυτεχνείο Κρήτης}\\
+\emph{Προπτυχιακός ερευνητής}\\
+Χανιά, Ελλάδα\\[.2cm]
+
+\section{Εκπαίδευση}
+\noindent
+\note{2004}\textsc{Διδακτορικό}\\
+\emph{Virtual television channels: Conceptual model, user interface
+design and affective usability evaluation, Επίβλεψη: Διομήδης
+Σπινέλλης}\\
+\emph{Διοικητική Επιστήμη και Τεχνολογία, Οικονομικό Πανεπιστήμιο
+Αθήνας}.\\[.2cm]
+\note{2001}\textsc{Μεταπτυχιακό}\\
+\emph{Σχεδίαση της διεπαφής με το χρήστη και αξιολόγηση της ευχρηστίας
+για εφαρμογές αμφίδρομης διαφήμισης στην ψηφιακή τηλεόραση, Επίβλεψη:
+Γεώργιος Δουκίδης}\\
+\emph{Μάρκετινγκ και Επικοινωνία, Οικονομικό Πανεπιστήμιο
+Αθήνας}.\\[.2cm]
+\note{1999}\textsc{Δίπλωμα}\\
+\emph{Σύστημα για την ανάπτυξη εφαρμογών γεωγραφικής πληροφόρησης στον
+παγκόσμιο ιστό, Επίβλεψη: Σταύρος Χριστοδουλάκης}\\
+\emph{Ηλεκτρονικών Μηχανικών και Μηχανικών Ηλεκτρονικών
+Υπολογιστών, Πολυτεχνείο Κρήτης}.\\[.2cm]
+
+\section{Γλώσσες}
+\emph{Ελληνικά} (Μητρική)\\
+\emph{Αγγλικά} (Άριστο)\\
+\emph{Ισπανικά} (Προχωρημένο)\\
+\emph{Γαλλικά} (Βασικό)\\
+
+\section{Διακρίσεις}
+\noindent
+\note{2014--2016}\textsc{Επισκέπτης Αναπληρωτής Καθηγητής}\\
+\emph{Norvegian University of Science and Technology (NTNU), Τροντχαϊμ,
+Νορβηγία}\\
+\note{2015}\textsc{Συν-υπεύθυνος προγράμματος (program co-chair)}\\
+\emph{\href{https://icec2015.idi.ntnu.no/}{14th International Conference
+on Entertainment Computing (ICEC) 2015}, NTNU, Norway}\\
+\note{2012}\textsc{Προσκεκλημένος εισηγητής (keynote speaker)}\\
+\emph{\href{http://sws2012.ime.usp.br/webmedia/keynotes.php}{WebMedia
+2012 ACM SIGMM conference}, Sao Paulo, Brazil, 2012}\\
+\note{2010--2011}\textsc{Υποτροφία Microsoft Research USA}\\
+\emph{Υποτροφία για την εκτέλεση του ερευνητικού προγράμματος
+Videopal}\\
+\note{2009--2011}\textsc{Υποτροφία Marie Curie}\\
+\emph{Υποτροφία για την εκτέλεση του ερευνητικού προγράμματος CULT
+(Cultural Understanding through Learning and Technology)}\\
+\note{2007}\textsc{Συν-υπεύθυνος προγράμματος (program co-chair)}\\
+\emph{5\textsuperscript{ο} Ευρωπαϊκό συνεδρίο
+\href{https://tvx.acm.org/2007/EuroITV-2007.html}{EuroITV 2007
+Interactive TV as a Shared Experience} για την αμφίδρομη τηλεόραση, CWI,
+Amsterdam, the Netherlands}\\
+\note{2007}\textsc{Προσκεκλημένος εισηγητής (keynote speaker)}\\
+\emph{Συνέδριο Eyes on Interactive Television (EyesonITV) 2007, Vasa,
+Finland, May 2007.}\\
+\note{2006}\textsc{Συν-υπεύθυνος προγράμματος (program co-chair)}\\
+\emph{4\textsuperscript{ο} Ευρωπαϊκό συνεδρίο (EuroITV 2006 Beyond
+Usability, Broadcast, and TV) για την αμφίδρομη τηλεόραση, ΟΠΑ, Αθήνα,
+Ελλάδα.}\\
+\note{2005}\textsc{Προσκεκλημένος εισηγητής (keynote speaker)}\\
+\emph{3\textsuperscript{ο} ευρωπαϊκό συνέδριο European Conference on
+Interactive Television (EuroITV) 2005 User Centred ITV Systems,
+Programmes and Applications, Aalborg, Denmark.}\\
+\note{2003}\textsc{Υποτροφία NSF (USA)}\\
+\emph{National Science Foundation (NSF) για τη συμμετοχή (35\%
+acceptance rate) στο πάνελ των διδακτορικών φοιτητών
+(\href{http://www.chi2003.org/doctoral_consortium_program.html}{doctoral
+consortium}) στο συνέδριο ACM SIGCHI conference on Human factors in
+computing systems 2003, Ft Lauderdale, Florida, USA.}\\
+
+\section{Έρευνα και τεχνολογική ανάπτυξη}
+\noindent
+\note{2016--}\textsc{Ανοιχτό περιεχόμενο και συμμετοχικό βιβλίο στην
+εκπαίδευση}\\
+\emph{Ανάπτυξη και συντήρηση συμπληρωματικού διαδραστικού και
+συμμετοχικού περιεχομένου για \href{http://mibook.org}{βιβλίο για την
+3βάθμια εκπαίδευση}.} Αυτοχρηματοδότηση\\[.2cm]
+\note{2012--}\textsc{Ανοιχτό λογισμικό στην έρευνα}\\
+\emph{Ανάπτυξη και συντήρηση υπηρεσιών που βασίζονται σε έργα λογισμικού
+ανοιχτού κώδικα, όπως \href{http://www.socialskip.org}{ανάλυση διάδρασης
+με βίντεο}, \href{http://www.flutrack.org}{οπτικοποίηση δεδομένων από
+κοινωνικά μέσα}, και τα \href{http://www.mapito.org}{γεωγραφικά συστήμα
+πληροφόρησης}.} Αυτοχρηματοδότηση\\[.2cm]
+\note{2018--2019}\textsc{DEFEND (Data Governance for Supporting GDPR)}\\
+\emph{Συλλογή απαιτήσεων από τους χρήστες} Ευρωπαϊκή Επιτροπή
+(Horizon2020)\\[.2cm]
+\note{2015--2018}\textsc{TRAMOOC (Translation for Massive Open Online
+Courses)}\\
+\emph{Σχεδίαση και αξιολόγηση διεπαφής για την μετάφραση των υπότιτλων
+σε βίντεο μαθήματα.} Ευρωπαϊκή Επιτροπή (Horizon2020)\\[.2cm]
+\note{2010--2011}\textsc{VIDEOPAL}\\
+\emph{Το έργο Videopal μελετά μια τεχνολογική παρέμβαση σε δύο
+απομακρυσμένες αίθουσες διδασκαλίας, η μια βρίσκεται στην Ελλάδα και η
+άλλη στις ΗΠΑ. Η τεχνολογική παρέμβαση εστιάζει στην ασύγχρονη
+επικοινωνία μέσω βίντεο για παιδιά στις τελευταίες τάξεις του
+δημοτικού.} Microsoft Research USA\\[.2cm]
+\note{2009--2011}\textsc{CULT (Cultural Understanding through Learning
+and Technology)}\\
+\emph{Μελέτη των κοινωνικών επιπτώσεων της τοποθέτησης ενός συστήματος
+διάχυτου υπολογισμού στον φυσικό χώρο. Το σύστημα περιλαμβάνει εύχρηστο
+και ευχάριστο λογισμικό που επιτρέπει την κοινωνική διάδραση, τόσο από
+μακρυά όσο και από κοντά, με πολλαπλά μέσα και συσκευές χρήστη. Τα
+σχολεία που συμμετέχουν βρίσκονται τόσο στην Ελλάδα όσο και στο
+εξωτερικό. Με αυτό τον τρόπο τα αποτελέσματα του έργου αφορούν
+γενικότερα όλες εκείνες τις κοινότητες που βρίσκονται μακρυά από τις
+πόλεις αλλά επιθυμούν να έχουν ίσες ευκαιρίες στην επικοινωνία και στην
+συμμετοχή στα κοινά.} Ευρωπαϊκή Επιτροπή (Marie Curie FP7-ERG)\\[.2cm]
+\note{2002--2010}\textsc{UITV (Understanding Interactive Television)}\\
+\emph{Εκδότης του διεθνούς ηλεκτρονικού
+\href{https://www.freelists.org/archive/uitv/}{ενημερωτικού δελτίου για
+την αμφίδρομη ψηφιακή τηλεόραση} με περισσότερους από 800 εγγεγραμμένους
+συνδρομητές (καθηγητές, ερευνητές, στελέχη διεθνών οπτικοακουστικών
+οργανισμών και τηλεοπτικών σταθμών).} Αυτοχρηματοδότηση\\[.2cm]
+\note{2006--2008}\textsc{MEDIACITY}\\
+\emph{Μεταδιδακτορική έρευνα και διδασκαλία στην διεπιστημονική περιοχή
+των \href{http://www.uni-weimar.de/mediaarchitecture}{νέων μέσων και της
+αρχιτεκτονικής}.} Ευρωπαϊκή Επιτροπή (Marie Curie FP6-ΤοΚ)\\[.2cm]
+\note{2004--2005}\textsc{TIRAMISU (The Innovative Rights and Access
+Management Inter-platform Solution)}\\
+\emph{Το έργο αυτό είχε αντικείμενο τη σχεδίαση και ανάπτυξη ενός
+πληροφορικού συστήματος διαχείρισης δικαιωμάτων ψηφιακού περιεχομένου.
+Απασχόληση με τη συλλογή των απαιτήσεων για τους χρήστες και τον
+σχεδιασμό του επιχειρηματικού μοντέλου για την διανομή και τιμολόγηση
+περιεχομένου πολυμέσων.} Ευρωπαϊκή Επιτροπή (FP6-IST)\\[.2cm]
+\note{2001--2003}\textsc{CONTESSA (Content Transformation Engine
+Supporting Universal Access)}\\
+\emph{Στο έργο αυτό έγινε η ανάπτυξη εργαλείων συγγραφής πολυμεσικού
+περιεχομένου, το οποίο θα μπορεί αυτόματα να προσαρμόζεται σε υβριδικά
+δίκτυα (π.χ. μετάδοση μέσω Internet, TV, wireless) και σε πολλαπλές
+καταναλωτικές συσκευές (π.χ. κινητό τηλέφωνο, υπολογιστής, τηλεόραση,
+κτλ). Απασχόληση στη διαχείριση του έργου.} Ευρωπαϊκή Επιτροπή
+(FP5-IST)\\[.2cm]
+\note{2000--2001}\textsc{iMEDIA (Intelligent Mediation Environment for
+Digital Interactive Advertising}\\
+\emph{Στο έργο αυτό έγινε ανάπτυξη ενός πρωτότυπου συστήματος αμφίδρομης
+διαφήμισης για την ψηφιακή τηλεόραση, το οποίο δημιουργεί ένα ξεχωριστό
+διαφημιστικό διάλειμμα σε κάθε οικιακό αποκωδικοποιητή, με βάση τα
+προφίλ των χρηστών. Απασχόληση στη σχεδίαση και αξιολόγηση της διεπαφής
+με το χρήστη.} Ευρωπαϊκή Επιτροπή (FP5-IST)\\[.2cm]
+\note{1997--1999}\textsc{CAMPIELLO (Interacting in collaborative
+environments to promote and sustain the meeting between inhabitants and
+tourists}\\
+\emph{Στο έργο αυτό μελετήθηκαν οι δυνατότητες για χρήση κοινωνικών
+συστημάτων γεωγραφικής πληροφόρησης σε περιοχές με πολιτιστικό
+ενδιαφέρον και έντονη τουριστική ανάπτυξη, όπως είναι τα Χανιά και η
+Βενετία. Σχεδίαση και υλοποίηση της διεπαφής με το χρήστη για ένα
+γεωγραφικό σύστημα πληροφόρησης μέσω Web.} Ευρωπαϊκή Επιτροπή
+(FP4-ESPRIT)\\[.2cm]
+
+\section{Διδασκαλία}
+
+\subsection{Επίβλεψη διδακτορικών διατριβών}
+\noindent
+\note{2018--}\textsc{Κωνσταντίνος Πατηνιώτης}\\
+\emph{Βίντεο-παιχνίδια και Εκπαίδευση}\\[.2cm]
+\note{2017--}\textsc{Μανούσος Καμηλάκης}\\
+\emph{Γεωγραφικά Συστήματα Πληροφόρησης}\\[.2cm]
+\note{2016--}\textsc{Διογένης Αλεξανδράκης}\\
+\emph{Κοινωνικά και Συνεργατικά Συστήματα}\\[.2cm]
+\note{2014--2019}\textsc{Αλέξανδρος Μερκούρης}\\
+\emph{Ρομποτική και Εκπαίδευση}\\[.2cm]
+\note{2013--2017}\textsc{Βαρβάρα Γαρνέλη}\\
+\emph{Βίντεο-παιχνίδια και Εκπαίδευση}\\[.2cm]
+
+\subsection{Επίβλεψη διπλωματικών και πτυχιακών εργασιών}
+\noindent
+\note{2019}\textsc{Γιάννης Πριόβολος, ΕΑΠ}\\
+\emph{Επαυξημένο επιτραπέζιο παιχνίδι}\\[.2cm]
+\note{2018}\textsc{Ζήσης Δημητριάδης, ΕΑΠ}\\
+\emph{Επαυξημένο φυσικό βιβλίο}\\[.2cm]
+\note{2017}\textsc{Αντώνης Παπαπολύζος, ΕΑΠ}\\
+\emph{Κινητός υπολογισμός και γεωγραφικοί χάρτες}\\[.2cm]
+\note{2016}\textsc{Σήφης Σημιανάκης, ΕΑΠ}\\
+\emph{Κινητός υπολογισμός και βίντεο}\\[.2cm]
+\note{2015}\textsc{Ιπποκράτης Καπενεκάκης, ΕΑΠ}\\
+\emph{Κινητός υπολογισμός και γεωγραφικοί χάρτες}\\[.2cm]
+\note{2014}\textsc{Αλέξανδρος Μερκούρης, ΕΑΠ}\\
+\emph{Ρομποτική και εκπαίδευση}\\[.2cm]
+\note{2013}\textsc{Κάρολος Ταλβής, ΙΠ}\\
+\emph{Οπτικοποίηση δεδομένων}\\[.2cm]
+\note{2013}\textsc{Βαρβάρα Γαρνέλη, ΙΠ}\\
+\emph{Βίντεο-παιχνίδια και εκπαίδευση}\\[.2cm]
+\note{2012}\textsc{Χριστίνα Ιλιούδη, ΙΠ}\\
+\emph{Βίντεο και εκπαίδευση}\\[.2cm]
+\note{2011}\textsc{Ιωάννης Λευτεριώτης, ΙΠ}\\
+\emph{Πολυαπτική διάδραση}\\[.2cm]
+\note{2011}\textsc{Χρυσούλα Γκονέλα, ΙΠ}\\
+\emph{Διάδραση και βίντεο}\\[.2cm]
+\note{2010}\textsc{Γιούλη Σταματούκου, ΕΑΠ}\\
+\emph{Εκπαιδευτικό βίντεο-παιχνίδι}\\[.2cm]
+\note{2010}\textsc{Κωνσταντίνος Μικάλεφ, ΕΑΠ}\\
+\emph{Εκπαίδευση και μουσείο}\\[.2cm]
+\note{2007}\textsc{Χαράλαμπος Κουτσουρελάκης, ΕΑΠ}\\
+\emph{Ευχρηστία κινητών τηλεφώνων}\\[.2cm]
+
+\subsection{Διδασκαλία μεταπτυχιακών μαθημάτων}
+\noindent
+\note{2019--2020}\textsc{Διάχυτος Υπολογισμός, ΠΠ}\\
+\emph{Εργασίες, 50\%}\\[.2cm]
+\note{2019--2020}\textsc{Συνεργατικές Τεχνολογίες, ΠΠ}\\
+\emph{Εργασίες, 50\%}\\[.2cm]
+\note{2011--}\textsc{Σχεδίαση και Ανάλυση Λογισμικού-Υλικού (ΣΔΥ60),
+ΕΑΠ}\\
+\emph{ΣΕΠ, Συντονιστής}\\[.2cm]
+\note{2009--2013, 2019--}\textsc{Κοινωνικά και Συνεργατικά Συστήματα
+(Συνεργατικές Εφαρμογές), ΙΠ}\\
+\emph{Εργασίες}\\[.2cm]
+\note{2009--2013}\textsc{Σχεδίαση της Διάδρασης Ανθρώπου-Υπολογιστή,
+ΙΠ}\\
+\emph{Διαλέξεις}\\[.2cm]
+\note{2010--2011}\textsc{Εξειδικεύσεις στην Τεχνολογία Λογισμικού
+(ΠΛΣ60), ΕΑΠ}\\
+\emph{ΣΕΠ}\\[.2cm]
+\note{2009--2010}\textsc{Σχεδιασμός και Διαχείριση Λογισμικού (ΠΛΣ61),
+ΕΑΠ}\\
+\emph{ΣΕΠ}\\[.2cm]
+\note{2007--2008}\textsc{Διαδραστική τηλεόραση, Πανεπιστήμιο Τεχνών
+Βερολίνου}\\
+\emph{Διαλέξεις, Εργασίες}\\[.2cm]
+\note{2006--2008}\textsc{Διαδραστική σχεδίαση, Πανεπιστήμιο Αιγαίου}\\
+\emph{Διαλέξεις}\\[.2cm]
+
+\subsection{Διδασκαλία προπτυχιακών μαθημάτων}
+\noindent
+\note{2011--}\textsc{Απανταχού υπολογίζειν (Εξυπνα Περιβάλλοντα και
+Εφαρμογές), ΙΠ}\\
+\emph{Εργασίες}\\[.2cm]
+\note{2009--}\textsc{Πολυμέσα, ΙΠ}\\
+\emph{Διαλέξεις, Εργαστήριο}\\[.2cm]
+\note{2008--}\textsc{Επικοινωνία Ανθρώπου-Υπολογιστή, ΙΠ}\\
+\emph{Διαλέξεις, Εργαστήριο}\\[.2cm]
+\note{2008--}\textsc{Τεχνολογία Λογισμικού, ΙΠ}\\
+\emph{Διαλέξεις, Εργαστήριο}\\[.2cm]
+\note{2011--}\textsc{Κοινωνικά και Συνεργατικά Συστήματα (Κινητά και
+Κοινωνικά Μέσα), ΙΠ}\\
+\emph{Διαλέξεις, Εργαστήριο}\\[.2cm]
+\note{2008--2009}\textsc{ΤΠΕ στον Τουρισμό, ΙΠ}\\
+\emph{Διαλέξεις, Εργαστήριο}\\[.2cm]
+\note{2007--2008}\textsc{Τέχνη Υπολογιστή και Τέχνη διαδικτύου, ΙΠ}\\
+\emph{Διαλέξεις, Εργαστήριο}\\[.2cm]
+\note{2006--2008}\textsc{Πολυμέσα, ΠΑ}\\
+\emph{Διαλέξεις, 50\%}\\[.2cm]
+\note{2006--2007}\textsc{Προγραμματισμός, ΠΑ}\\
+\emph{Εργαστήριο, 50\%}\\[.2cm]
+\note{2006--2008}\textsc{Οπτικοακουστικές τεχνικές, ΠΑ}\\
+\emph{Εργαστήριο}\\[.2cm]
+\note{2006--2008}\textsc{Θεωρία της επικοινωνίας, ΠΑ}\\
+\emph{Διαλέξεις}\\[.2cm]
+\note{2004--2005}\textsc{Ψηφιακά μέσα, ΟΠΑ}\\
+\emph{Διαλέξεις, 50\%}\\[.2cm]
+
+\subsection{Προσκεκλημένος ομιλητής}
+\noindent
+\note{2015}\textsc{Προγραμματισμός της διάδρασης και καινοτομία}\\
+\emph{Προσκεκλημένος ομιλητής, Ευχρηστία και Καινοτομία, ΕΚΠΑ}, Αθήνα,
+Ελλάδα\\[.2cm]
+\note{2014}\textsc{Open system and open data for epidemiology}\\
+\emph{Προσκεκλημένος ομιλητής, Madeira Interactive Technologies
+Institute}, Μαδέϊρα, Πορτογαλία\\[.2cm]
+\note{2013}\textsc{Open system and open data for epidemiology}\\
+\emph{Προσκεκλημένος ομιλητής, Health Informatics Day, ΕΚΠΑ}, Αθήνα,
+Ελλάδα\\[.2cm]
+\note{2012}\textsc{Ubiquitous computing and interaction}\\
+\emph{Σεμινάριο, Aarhus University}, Aarhus, Denmark\\[.2cm]
+\note{2012}\textsc{Interaction design for ubiquitous learning and
+entertainment through video technologies}\\
+\emph{Σεμινάριο, Sao Paulo University}, Sao Carlos, Brazil\\[.2cm]
+\note{2012}\textsc{Graphical interfaces for Navigating Web video}\\
+\emph{Προσκεκλημένος ομιλητής, Chalmers University of
+Technology}, Gothenburg, Sweden\\[.2cm]
+\note{2012}\textsc{Digital media pedagogy}\\
+\emph{Προσκεκλημένος ομιλητής, KTH}, Stockholm, Sweden\\[.2cm]
+\note{2012}\textsc{User-centered design and development methods for TV
+and video interaction}\\
+\emph{Προσκεκλημένος ομιλητής, University of Aveiro}, Aveiro,
+Portugal\\[.2cm]
+\note{2010}\textsc{Η διδασκαλία και η έρευνα στην περιοχή της
+Επικοινωνίας Ανθρώπου-Υπολογιστή στο Ιόνιο Πανεπιστήμιο}\\
+\emph{Σεμινάριο, Ημέρες Ευχρηστίας και Προσβασιμότητας 2010,
+ΕΚΠΑ}, Αθήνα, Ελλάδα\\[.2cm]
+\note{2007}\textsc{Από τα μέσα μαζικής επικοινωνίας στα διαδραστικά
+πολυμέσα}\\
+\emph{Προσκεκλημένος ομιλητής. Ιόνιο Πανεπιστήμιο}, Κέρκυρα,
+Ελλάδα\\[.2cm]
+\note{2006}\textsc{Interaction Design for Ambient Systems}\\
+\emph{Προσκεκλημένος ομιλητής. Αρχιτεκτονικά μέσα επικοινωνίας.
+Πανεπιστήμιο Κύπρου}, Λευκωσία, Κύπρος\\[.2cm]
+\note{2006}\textsc{Supporting the Social Uses of Interactive TV}\\
+\emph{Προσκεκλημένος ομιλητής, Social computing course, University of
+the Arts (UDK)}, Βερολίνο, Γερμανία\\[.2cm]
+\note{2005}\textsc{User Interface Design for Interactive TV}\\
+\emph{Προσκεκλημένος ομιλητής, HCI course, University College
+London}, London, England\\[.2cm]
+\note{2002}\textsc{Σχεδίαση της αλληλεπίδρασης με το χρήστη για
+εφαρμογές αμφίδρομης τηλεόρασης}\\
+\emph{Διεθνές μεταπτυχιακό GEM, Οικονομικό Πανεπιστήμιο Αθήνας}, Αθήνα,
+Ελλάδα\\[.2cm]
+
+\hypertarget{ux3c5ux3c0ux3ccux3bcux3bdux3b7ux3bcux3b1-ux3b3ux3b9ux3b1-ux3c4ux3b7ux3bd-ux3b4ux3b9ux3b4ux3b1ux3baux3c4ux3b9ux3baux3ae-ux3c4ux3c9ux3bd-ux3bcux3b1ux3b8ux3b7ux3bcux3acux3c4ux3c9ux3bd}{%
+\section{Υπόμνημα για την διδακτική των
+μαθημάτων}\label{ux3c5ux3c0ux3ccux3bcux3bdux3b7ux3bcux3b1-ux3b3ux3b9ux3b1-ux3c4ux3b7ux3bd-ux3b4ux3b9ux3b4ux3b1ux3baux3c4ux3b9ux3baux3ae-ux3c4ux3c9ux3bd-ux3bcux3b1ux3b8ux3b7ux3bcux3acux3c4ux3c9ux3bd}}
+
+Η βασική μαθησιακή φιλοσοφία που διατρέχει όλα τα μθήματα είναι ότι οι
+φοιτητές θα πρέπει να έχουν μεγάλη συμμετοχή στο περιεχόμενο του
+μαθήματος κυρίως μέσω των εργασιών, έτσι ώστε να μάθουν χρήσιμες
+δεξιότητες με συμμετοχικό τρόπο. Για να αυξήσουμε την συμμετοχή των
+φοιτητών βασιζόμαστε στους παρακάτω πυλώνες:
+
+\begin{itemize}
+\tightlist
+\item
+  Ιδιοκτησία της εργασίας με ατομικό ορισμό των προδιαγραφών
+\item
+  Κοινό αποθετήριο με τα παραδοτέα εργασιών για όλους
+\item
+  Δύο τουλάχιστον ενδιάμεσα παραδοτέα με προφορική παρουσίαση
+\end{itemize}
+
+Οι πρώτες διαλέξεις του μαθήματος χρησιμοποιούνται για να περιγράψουν το
+γνωστικό πλαίσιο του κάθε μαθήματος και να εμπνεύσουν τους φοιτητές μέσω
+των πρακτικών εφαρμογών που έχει η αντίστοιχη γνώση. Το πρώτο παραδοτέο
+καλεί τους φοιτητές να διαλέξουν μια από τις θεματικές εργασίες (π.χ.,
+κατασκευή εκπαιδευτικού βιντεοπαιχνιδιού) και να ορίσουν μόνοι τους τις
+προδιαγραφές (π.χ., μαθηματικά 6ης δημοτικού) μέσα στο πλαίσιο που
+περιγράφει η αντίστοιχη εκφώνηση. Με αυτόν τον τρόπο υπάρχουν
+συγκεκριμένα και κοινά κριτήρια βαθμολόγησης, αλλά και περιθώριο ο κάθε
+φοιτητής να κάνει αυτό που τον ενδιαφέρει. Ολοι οι φοιτητές παραδίδουν
+στην ίδια περιοχή, έτσι ώστε να υπάρχει διαφάνεια και δυνατότητα να
+μαθαίνουν από τα λάθη/σωστά των άλλων. Ταυτόχρονα τα δύο τουλάχιστον
+ενδιάμεσα παραδοτέα παρουσιάζονται προφορικά, έτσι ώστε να υπάρχει
+διαπροσωπική επικοινωνία και συμβουλές για βελτίωση. Καθώς το μάθημα
+προχωράει, τα έργα των φοιτητών δίνουν στον διδάσκοντα καλύτερη εικόνα
+της πρόδοου και επιτρέπουν διορθωτικές κινήσεις. Επιπλέον, οι διαλέξεις
+αρχίζουν να περιστρέφονται λιγότερο γύρω από την ``ύλη'' και περισσότερο
+πάνω στα έργα των φοιτητών (π.χ., επιτυχημένα έργα, σημεία για
+βελτίωση), έτσι ώστε να υπάρχει μια αίσθηση επίδρασης. Η παραπάνω
+διαδικασία είναι οργανωμένη σε αποθετήρια κώδικα στο σύστημα github:
+https://github.com/courses-ionio Για την βέλτιστη εφαρμογή των παραπάνω
+μεθόδων απαιτείται και η συμμετοχή των βοηθών του μαθήματος (υποψήφιοι
+διδάκτορες) με αναλογία 20 περίπου φοιτητές για κάθε βοηθό.
+
+\hypertarget{ux3b5ux3c0ux3b9ux3c3ux3c4ux3b7ux3bcux3bfux3bdux3b9ux3baux3ae-ux3baux3b1ux3b9-ux3b4ux3b9ux3bfux3b9ux3baux3b7ux3c4ux3b9ux3baux3ae-ux3c5ux3c0ux3b7ux3c1ux3b5ux3c3ux3afux3b1}{%
+\section{Επιστημονική και διοικητική
+υπηρεσία}\label{ux3b5ux3c0ux3b9ux3c3ux3c4ux3b7ux3bcux3bfux3bdux3b9ux3baux3ae-ux3baux3b1ux3b9-ux3b4ux3b9ux3bfux3b9ux3baux3b7ux3c4ux3b9ux3baux3ae-ux3c5ux3c0ux3b7ux3c1ux3b5ux3c3ux3afux3b1}}
+
+\textbf{Συντακτική επιτροπή:} ACM Computers in Entertainment, Elsevier
+Entertainment Computing, Journal of Virtual Reality and Broadcasting
+
+\textbf{Επιτροπές συνεδρίων:} 14th International Conference on
+Entertainment Computing (ICEC 2015), 13th International Conference on
+Entertainment Computing (ICEC 2014), ACM TVX 2014, EuroITV 2005-2013,
+21st ACM International Conference on Multimedia (ACM Multimedia 2013),
+Workshop on Multi-User Services for Social TV (MUSST2013), CVRB 2013 -
+1st International Conference on Virtual Reality and Broadcasting,
+International Conference on MultiMedia Modeling (MMM 2012, 2014-2015),
+4th International Conference on Embedded and Multimedia Computing
+(EM-Com 2009), 6\textsuperscript{th} International Conference on
+Ubiquitous Intelligence and Computing (UIC 2009), 1\textsuperscript{st}
+International Conference on Designing Interactive User Experiences for
+TV and Video (UXTV08), 2nd International Conference on Multimedia and
+Ubiquitous Engineering (MUE 2008), IFIP Entertainment Computing
+Symposium (ECS-2008), Ambisys 2008 Workshop on Ambient Media Delivery
+and Interactive Television (AMDIT 2008), European Interactive TV
+(EuroITV) conference (2005-2010), IET Intelligent Environments 2007, IET
+Intelligent Environments 2008, ACM SIGCHI 2006 Workshop on sociable and
+mobile ITV, ACM SIGCHI 2007 workshop on Shared Encounters: Content
+Sharing as Social Glue in Everyday Places, ACM SIGCHI 2007 Workshop on
+Supporting non-professional users in the new media landscape
+
+\textbf{Ομάδες εργασίας:} Vice-Chair of the
+\href{http://www.ifip.org/bulletin/bulltcs/memtc14.htm\#WG146}{IFIP
+Working Group on Interactive TV}, Technical Committee on Entertainment
+Computing (TC14), International Federation for Information Processing
+(IFIP)
+
+\textbf{Μέλος:} IFIP, TEE, ACM
+
+\textbf{Κριτής:}
+
+\emph{Περιοδικά:} Computers and Education (Elsevier), The International
+Review of Research in Open and Distance Learning, Journal of Computer
+Assisted Learning (Wiley), Human Technology: An Interdisciplinary
+Journal on Humans in ICT Environments, Journal of Experimental Child
+Psychology (Elsevier), Entertainment Computing (Elsevier), Multimedia
+Systems Journal (ACM/Springer), Information Sciences Journal (Elsevier),
+Personal and Ubiquitous Computing (Springer), Transactions on Multimedia
+(IEEE), Transactions on Multimedia Computing, Communications and
+Applications (ACM TOMCCAP), Multimedia Tools and Applications
+(Springer), International Journal of Human-Computer Interaction (Taylor
+and Francis), Behaviour and Information Technology (Taylor and Francis),
+Telematics and Informatics (Elsevier), Computers in Entertainment (ACM),
+Journal of Virtual Reality and Broadcasting, International Journal of
+E-Services and Mobile Applications (IGI)
+
+\emph{Συνέδρια:} UbiComp 2012, 18th International Conference on
+MultiMedia Modeling (MMM 2012), 7th IEEE International Workshop on
+Networking Issues in Multimedia Entertainment (NIME'11), 7th
+International Conference on Pervasive Computing (Pervasive 2009), ACM
+SIGCHI Papers and Notes (2007-2013), ACM SIGCHI UIST Demos (2008), ACM
+SIGCHI UIST Papers (2007), IEΤ Intelligent Environments (2007-2008), ACM
+SIGCHI Student Papers (2003-2006), ACM SIGCHI Research in Progress
+(2003-2006, 2008, 2011), ACM SAC 2004 - Special Track on Ubiquitous
+Computing, Cross Media Service Delivery Conference 2003
+
+\textbf{Ανάπτυξη συστήματος:} Υλοποίηση συστήματος διαχείρισης και
+πλοήγησης περιεχομένου για την πύλη UITV.INFO
+\href{http://uitv.epidro.me}{{http://uitv.epidro.me}} Το σύστημα
+επιτρέπει την εύκολη ενημέρωση της πήλης με περιεχόμενο σχετικά με την
+έρευνα στην ψηφιακή τηλεόραση. Αποθετήριο ανοικτού κώδικα για το
+εκπαιδευτικό και ερευνητικο λογισμικό στο τμήμα:
+\href{https://github.com/ioniodi}{{https://github.com/ioniodi}}
+
+\textbf{Σύμβουλος έκδοσης:} Συνεργασία (2006-2008) με την φοιτητική
+ομάδα που είναι υπεύθυνη για την διαδικτυακή πύλη του Πανεπιστημίου
+Αιγαίου (\href{http://my.aegean.gr/}{{http://my.aegean.gr}}).
+
+\textbf{Διοικητικό έργο και επιτροπές (Τμήμα Πληροφορικής, Ιόνιο
+Πανεπιστήμιο):} Προγράμματος σπουδών, πρακτικής άσκησης, αναμόρφωσης της
+κατεύθυνσης ανθρωπιστικές και κοινωνικές επιστήμες, ιστοσελίδας
+τμήματος, οδηγού σπουδών, github courseware, εξ αποστάσεως διδασκαλία
+και αξιολόγηση.
+
+\hypertarget{ux3c5ux3c0ux3ccux3bcux3bdux3b7ux3bcux3b1-ux3b3ux3b9ux3b1-ux3c4ux3b1-ux3b5ux3c0ux3b9ux3c3ux3c4ux3b7ux3bcux3bfux3bdux3b9ux3baux3ac-ux3b4ux3b7ux3bcux3bfux3c3ux3b9ux3b5ux3cdux3bcux3b1ux3c4ux3b1}{%
+\section{Υπόμνημα για τα επιστημονικά
+δημοσιεύματα}\label{ux3c5ux3c0ux3ccux3bcux3bdux3b7ux3bcux3b1-ux3b3ux3b9ux3b1-ux3c4ux3b1-ux3b5ux3c0ux3b9ux3c3ux3c4ux3b7ux3bcux3bfux3bdux3b9ux3baux3ac-ux3b4ux3b7ux3bcux3bfux3c3ux3b9ux3b5ux3cdux3bcux3b1ux3c4ux3b1}}
+
+Το μεγαλύτερο μέρος της έρευνας αφορά την κατασκευή λογισμικού για την
+διάδραση ανθρώπου-υπολογιστή. Ταυτόχρονα, η μεθοδολογία αντιμετώπισης
+των ερευνητικών θεμάτων διατρέχει ένα διεπιστημονικό άξονα, με βασικούς
+πυλώνες:
+
+\begin{itemize}
+\item
+  Ανάπτυξη εργαλείων λογισμικού,
+\item
+  Ανθρωποκεντρική σχεδίαση της αλληλεπίδρασης με τον χρήστη,
+\item
+  Πειράματα με χρήστες στο εργαστήριο ή τις μελέτες στο πεδίο
+\end{itemize}
+
+Τα ερευνητικά ενδιαφέροντα εστιάζουν κυρίως στις παρακάτω περιοχές:
+
+\emph{Επικοινωνία ανθρώπου-υπολογιστή:} Το βασικό υπόβαθρο καθώς και ενα
+σημαντικό τμήμα της έρευνας, όπως φαίνεται και από την πτυχιακή εργασία
+(Τ1), την μεταπτυχιακή διατριβή (Τ2) και τη διδακτορική διατριβή (Τ3),
+αφορά κυρίως την σχεδίαση λογισμικού διάδρασης ανθρώπου-υπολογιστή. Το
+αντικείμενο αυτό αντιμετωπίζεται από διαφορετικές πλευρές και σε
+διαφορετικά πεδία εφαρμογής: 1) Στην πτυχιακή εργασία (Τ1) έγινε
+υλοποίηση της αλληλεπίδρασης με τον χρήστη για ένα σύστημα γεωγραφικής
+πληροφόρησης με ηλεκτρονικό χάρτη μέσω Web, 2) στην μεταπτυχιακή
+διατριβή (Τ2) έγινε μελέτη και αξιολόγηση της αλληλεπίδρασης με τον
+χρήστη για ένα σύστημα αμφίδρομης διαφήμισης στην ψηφιακή τηλεόραση, και
+3) στην διδακτορική διατριβή (Τ3) έγινε σχεδίαση, υλοποίηση και
+αξιολόγηση της αλληλεπίδρασης του χρήστη με εφαρμογές αμφίδρομης
+τηλεόρασης και ειδικά με ένα υπόδειγμα μουσικής τηλεόρασης. Εκτός από
+την περίπτωση της τηλεόρασης (J1, J2, J3, J4, J7), επιπλέον μελέτες της
+διάδρασης με τον χρήστη έχουν γίνει για την περίπτωση των έξυπνων
+κινητών τηλεφώνων (J9, J10, J14), των γεωγραφικών συστημάτων
+πληροφόρησης (J16, J24), των συστημάτων διαπροσωπικής επικοινωνίας (J12,
+J13), των μεγάλων πολυαπτικών οθονών (P23, P24, P33, J22), και της
+εκπαιδευτικής ρομποτικής (J25).
+
+\emph{Διαδραστική τηλεόραση και βίντεο:} Η βασική φιλοσοφία που
+διατρέχει την έρευνα για την ψηφιακή τηλεόραση είναι η θεώρηση των
+χρηστών ως θεατές ή ως παραγωγούς οπτικοακουστικού περιεχομένου (J1, J3,
+J4, J7, B1). Η προσέγγιση αυτή έρχεται σε αντίθεση με την ισχύουσα
+θεώρηση του χρήστη αλληλεπιδραστικών πολυμέσων ως χρήστη επιτραπέζιου
+υπολογιστή. Εχει γίνει εκτεταμένη εμπειρική έρευνα σε θέματα όπως: 1)
+Σχεδιασμός και ανάπτυξη εργαλείων προγραμματισμού που είναι κατάλληλα
+για τη ροή εργασίας των παραγωγών τηλεοπτικού περιεχομένου (J1, J4), 2)
+σχεδίαση της διεπαφής έτσι ώστε να διευκολύνει την αλληλεπίδραση του
+τηλεθεατή με την πλούσια οπτική γλώσσα του τηλεοπτικού προγράμματος (J2,
+J3, J5, P2, P4). Ακόμη, έγινε σχεδιασμός ενός μοντέλου που διευκολύνει
+την καθολική πρόσβαση των τηλεθεατών σε αμφίδρομο τηλεοπτικό περιεχόμενο
+(P5). 3) Ειδική μεθοδολογία αξιολόγησης της ευχρηστίας (J4), η οποία
+λαμβάνει υπόψιν την χρήση και τις ανάγκες του τηλεοπτικού κοινού (P7).
+Καθώς το βίντεο έγινε μετά το 2005 σταδιακά διαθέσιμο και μέσω της
+ευρυζωνικότητας, η έρευνα αυτή έχει επεκταθεί και συνεχίζεται στην
+μελέτη της διάδρασης με δικτυακό βίντεο (J11, J15, J18, J19, P20).
+
+\emph{Εκπαιδευτικές τεχνολογίες και διδακτική του προγραμματισμού:} Η
+χρήση των υπολογιστών για την διευκόλυνση της μάθησης και ειδικά η
+διδακτική του προγραμματισμού έχουν σημαντικό ρόλο στην εκπαίδευση
+γενικά και ειδικά σε αυτήν της πληροφορικής. Η έρευνα για την
+διευκόλυνση της μάθησης εστιάζει στις τεχνολογίες του βίντεο και της
+διάδρασης (J20, J27), καθώς και στις τεχνολογίες των εκπαιδευτικών
+βιντεοπαιχνιδιών (J17, J23, J28). Η τρέχουσα έρευνα για την διδακτική
+του προγραμματισμού, εστιάζει στην χρήση της ρομποτικής (J25).
+
+\emph{Κινητός και διάχυτος υπολογισμός:} Ενα σημαντικό και αυξανόμενο
+τμήμα της έρευνας αφορά τη σχεδίαση και τις κοινωνικές πτυχές των
+τεχνολογιών κινητού και διάχυτου υπολογισμού. Η έρευνα σε αυτές τις
+περιοχές μπορεί να αναδείξει περισσότερο σημαντικές πτυχές των
+υπολογιστικών και δικτυακών εφαρμογών σε σχέση με τις παραδοσιακές που
+έχουν έμφαση κυρίως στον χώρο της εργασίας. Εκτός από τα συστήμα
+ψυχαγωγίας μέσω της τηλεόρασης (J1, J2), έχει γίνει μελέτη σε κινητά και
+διάχυτα συστήματα (J14, J26). Ακόμη, έγινε κατασκευή λογισμικού
+διάδρασης για συνεργασία πολλών χρηστών πάνω στην ίδια μεγάλη πολυαπτική
+οθόνη (J22). Τέλος, γίνεται μελέτη στα γεωγραφικά συστήματα πληροφορήσης
+(J16, J24) και στις κινητές τεχνολογίες θέσης αφού έχουν κεντρικό ρόλο
+στην καθημερινότητα του χρήστη.
+
+\emph{Συνεργατικά και κοινωνικά μέσα:} Σε ένα δεύτερο επίπεδο, επιπλέον
+έρευνα έχει γίνει στο πεδίο των κοινωνικών μέσων, η οποία ενισχύει και
+διευρύνει το πεδίο εφαρμογής των καθιερωμένων επιχειρηματικών μοντέλων
+της βιομηχανίας της τηλεόρασης (J6) σε νέους τομείς, όπως το διαδίκτυο
+και τα κινητά τηλέφωνα (J5). Επίσης, έχει γίνει μελέτη των προτιμήσεων
+και της συμπεριφοράς των χρηστών σε σε εικονικούς κόσμους (J8). Τέλος
+γίνεται ανάπτυξη συστήματος και ανάλυσης των δεδομένων από κοινωνικά
+δίκτυα για την διευκόλυνση στον εντοπισμό κοινωνικών φαινομένων όπως η
+εξάπλωση της γρίπης (J21).
+
+%bibliography
+\section{Βιβλιογραφία}
+
+\bibsection{Διατριβές}{../_bib/thesis.bib}{Τ}
+
+\end{greek}
+
+\begin{english}
+
+\bibsection{Βιβλία}{../_bib/books.bib}{B}
+
+\bibsection{Επιμέλεια βιβλίων}{../_bib/editor.bib}{E}
+
+\bibsection{Επιμέλεια περιοδικών}{../_bib/guest.bib}{G}
+
+\bibsection{Περιοδικά}{../_bib/journals.bib}{J}
+
+\bibsection{Συνέδρια}{../_bib/conferences.bib}{P}
+
+\bibsection{Συμπόσια}{../_bib/workshops.bib}{W}
+
+\bibsection{Κεφάλαια σε βιβλία}{../_bib/chapters.bib}{C}
+
+\end{english}
+
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Τελευταία ενημέρωση: \today\- •\-
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Η σελιδοποίση έγινε με το \href{https://github.com/mrzool/cv-boilerplate}{
+\fontspec{Times New Roman}\XeTeX }\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+\href{http://users.ionio.gr/choko}{users.ionio.gr/choko}}
+\end{center}
+
+\end{document}

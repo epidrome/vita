@@ -2,6 +2,7 @@
 
 I have been employed and/or acquired external funding in context of the following projects.
 
+* DEFEND (Data Governance for Supporting GDPR) EC H202 (2018-2019) 
 * TraMOOC (Translation for Massive Open Online Courses) EC H2020 (2015-2018)
 * ArTe: Art and Technology, Norwegian University of Science and Technology, (2011-2012)
 * VIDEOPAL: Asynchronous Video Messaging over a distance: Microsoft Research Grant (2010-2011)

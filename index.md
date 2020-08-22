@@ -1,5 +1,6 @@
 ---
-title: "Konstantinos Chorianopoulos Curriculum Vitae" 
+layout: home
+title: "Konstantinos Chorianopoulos" 
 ---
 
 {% include cv/summary.md %}
