@@ -14,5 +14,8 @@ In my free time, I like to surf (surfing and windsurfing). Here is a (growing) l
 * Stand up: Be explosive, but gentle.
 * Exit: Sooner or later you will have to make an exit from that (not so) nice wave, you better have a strategy before hand.
 * Landing smoothly: It is already quite hard to jump and even harder to do so with style, but the most challenging part is to land that aerial trick smoothly.
+* Entry: Working your way out should be together with the current, not against it, save your stamina. 
+* Look: You will (sooner than later) go towards where you look at, so make sure that you look towards where you really want to go to.
+* Think: You become what you think about, you better choose your thinking and stick to it, at least for a while.
 
 Sometimes, I think that the above findings might also apply to other life situations besides surfing.
