@@ -13,7 +13,7 @@ permalink: /about/
 [2. Adjunct Teachers Offices of the Department of Informatics and of the      Department of Audio and Visual Arts](http://www.ionio.gr/central/en/map)
 
 ## Office hours
-[Schedule a personal meeting](https://calendly.com/choko/meeting), by providing your name, email, and github profile link.
+[Schedule a personal meeting](https://calendly.com/choko/), by providing your name, email, and github profile link.
 
 ## Postal address
 Ionian University
