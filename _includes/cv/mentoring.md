@@ -10,10 +10,10 @@ If you are interested in pursuing a PhD with me as advisor please contact me to 
 
 * Varvara Garneli (2017)
 * Alexandros Merkouris (2019)
+* Elias Stouraitis (2020)
 
 ### Ongoing PhD
 
-* Elias Stouraitis (2015-)
 * Diogenis Alexandrakis (2016-)
 * Manousos Kamilakis (2017-)
 * Konstantinos Patiniotis (2018-)
