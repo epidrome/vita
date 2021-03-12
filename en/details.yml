@@ -68,7 +68,7 @@ education:
 # Settings
 mainfont: Hoefler Text
 fontsize: 11pt
-lang: english
+lang: en-US 
 geometry: a4paper, left=35mm, right=35mm, top=51mm, bottom=17mm
 toc: false
 ---
