@@ -4,16 +4,11 @@ title: About
 permalink: /about/
 ---
 
-## Konstantinos Chorianopoulos CV in PDF
-[English CV](/en/resume.pdf)
-
-[Ελληνικό Βιογραφικό](/gr/resume.pdf)
+## Office hours
+[Schedule a personal meeting](https://calendly.com/choko/office), by providing your name, email, and github profile link.
 
 ## Office address
 [2. Adjunct Teachers Offices of the Department of Informatics and of the      Department of Audio and Visual Arts](http://www.ionio.gr/central/en/map)
-
-## Office hours
-[Schedule a personal meeting](https://calendly.com/choko/office), by providing your name, email, and github profile link.
 
 ## Postal address
 Ionian University
@@ -23,6 +18,11 @@ Platia Tsirigoti 7
 
 49100 Corfu
 GREECE
+
+## Konstantinos Chorianopoulos CV in PDF
+[English CV](/en/resume.pdf)
+
+[Ελληνικό Βιογραφικό](/gr/resume.pdf)
 
 ## Source files and workflow
 You can go a long way starting with plain-text Markdown files, which are converted to:
