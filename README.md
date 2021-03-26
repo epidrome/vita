@@ -8,7 +8,7 @@ permalink: /about/
 [Schedule a personal meeting](https://calendly.com/choko/office), by providing your name, email, and github profile link.
 
 ## Office address
-[2. Adjunct Teachers Offices of the Department of Informatics and of the      Department of Audio and Visual Arts](http://www.ionio.gr/central/en/map)
+[1. Adjunct Teachers Offices of the Department of Informatics and of the      Department of Audio and Visual Arts](http://www.ionio.gr/central/en/map)
 
 ## Postal address
 Ionian University
