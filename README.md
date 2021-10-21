@@ -33,3 +33,5 @@ You can go a long way starting with plain-text Markdown files, which are convert
 Alternatively, if you regard digital literacy as a strictly structured and hierarchical process given to us by a higher deity, you can always use a (self-proclaimed participatory) medium such as LinkedIn, ResearchGate, etc.
 
 The motivation for this approach is outlined in a (draft) short article: [My timeline is bigger than yours](https://scholar.epidro.me/chorianopoulos_2020).
+
+[source code](https://github.com/epidrome/vita)
