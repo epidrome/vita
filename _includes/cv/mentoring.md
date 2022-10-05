@@ -11,10 +11,10 @@ If you are interested in pursuing a PhD with me as advisor please contact me to 
 * Varvara Garneli (2017)
 * Alexandros Merkouris (2019)
 * Elias Stouraitis (2020)
+* Diogenis Alexandrakis (2021)
 
 ### Ongoing PhD
 
-* Diogenis Alexandrakis (2016-)
 * Manousos Kamilakis (2017-)
 * Konstantinos Patiniotis (2018-)
 
@@ -37,7 +37,7 @@ The following students have been successfully supported toward a completed thesi
 * Patiniotis, K. (2017): Serious video games
 * Chorianopoulou, B. (2017): Science education through robots and tablets
 * Papapolyzos, A. (2017): Peer-reviewing for collaborative cartography
-* Dimitriadis, Z. (2018): Interactive book
+
 
 ### External examiner
 
@@ -55,3 +55,4 @@ The following students have been successfully supported toward a completed thesi
 * Altanopoulou, P. (2017): PhD Thesis (University of Patras, Greece)
 * Kravvaris, D. (2018): PhD Thesis (Ionian University, Greece)
 * Nikiforos, S. (2020): PhD Thesis (Ionian University, Greece)
+* Michalakis, K. (2022): PhD Thesis (University of the Aegean, Greece)
