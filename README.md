@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 ## Office hours
-[Schedule a personal meeting](https://calendly.com/choko/progress), by providing your name, email, and github profile link or meeting agenda.
+[Personal meetings are only available outside official course hours](https://calendly.com/choko/progress), by providing your name, email, and github profile link or meeting agenda.
 
 ## Office address
 [1. Adjunct Teachers Offices of the Department of Informatics and of the      Department of Audio and Visual Arts](http://www.ionio.gr/central/en/map)
