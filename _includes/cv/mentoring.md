@@ -56,3 +56,4 @@ The following students have been successfully supported toward a completed thesi
 * Kravvaris, D. (2018): PhD Thesis (Ionian University, Greece)
 * Nikiforos, S. (2020): PhD Thesis (Ionian University, Greece)
 * Michalakis, K. (2022): PhD Thesis (University of the Aegean, Greece)
+* Vogiatzidakis, P. (2022): PhD Thesis (University of the Aegean, Greece)
