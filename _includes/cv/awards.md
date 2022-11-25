@@ -1,7 +1,7 @@
 ## Awards and distinctions
-
+* [2% top scientist](https://doi.org/10.17632/btchxktzyw.5), informatics sub-fields, 2003-2021
+* Visiting Scientist at Norwegian University of Science and Technology (NTNU), Trondheim, Norway (2011-2016).
 * [Keynote speaker at WebMedia 2012 conference](http://sws2012.ime.usp.br/webmedia/keynotes.php), Sao Paulo, Brazil, 2012.
-* Visiting Scientist at Norwegian University of Science and Technology (NTNU), Trondheim, Norway (2011-2013).
 * [Keynote speaker at World Usability Day](http://iskratel.com/en/news/world-usability-day-2011), Slovenia, 2011.
 * Principal Investigator of a Microsoft Research fund for a field study on an asynchronous video link between primary education schools in the USA and Greece, Ionian University, Greece (2010-2011).
 * [Marie Curie (European Reintegration Grant) fellowship by the European Commission for research in computer mediated communication in learning environments](http://cult.di.ionio.gr/), Ionian University, Greece (2009-2011).
