@@ -405,7 +405,7 @@ languages:
   proficiency: Βασικό
 
 # Settings
-mainfont: GFS Didot
+mainfont: Noto Serif 
 fontsize: 11pt
 lang: el-GR
 geometry: a4paper, left=35mm, right=35mm, top=25mm, bottom=25mm
