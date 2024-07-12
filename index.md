@@ -3,6 +3,13 @@ layout: home
 title: "Konstantinos Chorianopoulos" 
 ---
 
+[Curriculum vitae PDF](/en/resume.pdf)
+
+## Curriculum Vitae in Greek
+
+[Ελληνικό βιογραφικό PDF](/gr/resume.pdf)
+
+
 {% include cv/summary.md %}
 {% include cv/recent.md %}
 {% include cv/bio.md %}
@@ -18,11 +25,4 @@ title: "Konstantinos Chorianopoulos"
 {% include cv/awards.md %}
 {% include cv/social.md %}
 {% include cv/getalife.md %}
-
-[Curriculum vitae PDF](/en/resume.pdf)
-
-## Curriculum Vitae in Greek
-
-[Ελληνικό βιογραφικό PDF](/gr/resume.pdf)
-
 
