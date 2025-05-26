@@ -1,11 +1,10 @@
 title: Curriculum Vitae
 author: 
   name: Konstantinos Chorianopoulos
-  email: vita@epidro.me 
-description: >- # this means to ignore newlines until "baseurl:"
+  email: "vita@epidro.me"
+description: > 
   Konstantinos Chorianopoulos Curriculum Vitae
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
 
 minima:
   social_links:
@@ -13,19 +12,18 @@ minima:
       icon: github
       url: "https://github.com/epidrome"
 
+# Build settings
+#
 # minima dependencies quiet sass
-silence_deprecation: import
 sass:
   quiet_deps: true
-logger:
-  quiet_deps: true
+  silence_deprecations: [import]
 
-# Build settings
-# remote_theme: "jekyll/minima"
-theme: minima
+remote_theme: "jekyll/minima@495703c"
 
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
   - jekyll-seo-tag
 
 header_pages:
