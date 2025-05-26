@@ -9,9 +9,19 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 minima:
   social_links:
-    github:  epidrome
+    - title: epidrome profile at Github
+      icon: github
+      url: "https://github.com/epidrome"
+
+# minima dependencies quiet sass
+silence_deprecation: import
+sass:
+  quiet_deps: true
+logger:
+  quiet_deps: true
 
 # Build settings
+# remote_theme: "jekyll/minima"
 theme: minima
 
 plugins:
