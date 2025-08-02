@@ -24,5 +24,4 @@ title: "Konstantinos Chorianopoulos"
 {% include cv/funded.md %}
 {% include cv/awards.md %}
 {% include cv/social.md %}
-{% include cv/getalife.md %}
 

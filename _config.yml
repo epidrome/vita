@@ -1,16 +1,9 @@
 title: Curriculum Vitae
-author: 
-  name: Konstantinos Chorianopoulos
-  email: "vita@epidro.me"
+email: "vita@epidro.me"
 description: > 
   Konstantinos Chorianopoulos Curriculum Vitae
 baseurl: ""
-
-minima:
-  social_links:
-    - title: epidrome profile at Github
-      icon: github
-      url: "https://github.com/epidrome"
+github_username: epidrome 
 
 # Build settings
 #
@@ -19,12 +12,10 @@ sass:
   quiet_deps: true
   silence_deprecations: [import]
 
-remote_theme: "jekyll/minima@495703c"
+theme: "minima"
 
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
-  - jekyll-seo-tag
 
 header_pages:
  - README.md
