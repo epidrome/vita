@@ -15,8 +15,6 @@ If you are interested in pursuing a PhD with me as advisor please contact me to 
 
 ### Ongoing PhD
 
-* Manousos Kamilakis (2017-)
-* Konstantinos Patiniotis (2018-)
 
 ### MSc, BSc Thesis students
 
@@ -37,6 +35,11 @@ The following students have been successfully supported toward a completed thesi
 * Patiniotis, K. (2017): Serious video games
 * Chorianopoulou, B. (2017): Science education through robots and tablets
 * Papapolyzos, A. (2017): Peer-reviewing for collaborative cartography
+* Batoglou, E. (2019): Comparative evaluation of hyrid cartographic editing
+* Asimakopoulou, R. (2022): Bootstraping a simple operating system for higher education
+* Aggelidis, V. (2025): Interactive physical book
+* Gliatis, A. (2025): Comparative evaluation of command line feedback with AI
+* Karamitsos, I. (2025): Object oriented syllabus with Smalltalk
 
 
 ### External examiner
