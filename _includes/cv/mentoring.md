@@ -10,7 +10,6 @@ If you are interested in pursuing a PhD with me as advisor please contact me to 
 
 * Varvara Garneli (2017)
 * Alexandros Merkouris (2019)
-* Elias Stouraitis (2020)
 * Diogenis Alexandrakis (2021)
 
 ### Ongoing PhD
@@ -58,5 +57,8 @@ The following students have been successfully supported toward a completed thesi
 * Altanopoulou, P. (2017): PhD Thesis (University of Patras, Greece)
 * Kravvaris, D. (2018): PhD Thesis (Ionian University, Greece)
 * Nikiforos, S. (2020): PhD Thesis (Ionian University, Greece)
+* Stouraitis, E. (2020): PhD Thesis (Ionian University, Greece)
 * Michalakis, K. (2022): PhD Thesis (University of the Aegean, Greece)
 * Vogiatzidakis, P. (2022): PhD Thesis (University of the Aegean, Greece)
+* Sakelariou, A. (2025): PhD Thesis (Ionian University, Greece)
+
